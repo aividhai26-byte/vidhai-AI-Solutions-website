@@ -1,0 +1,1404 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vidhai AI Solutions — Custom Software, ERP & CRM systems built for schools, construction firms, and enterprises across Tamil Nadu.">
+
+  <title>Vidhai Custom Services - ERP, CRM & Enterprise Software</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/vidhailogobg.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/bexon-icons.css">
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+  <link rel="stylesheet" href="assets/css/venobox.min.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    /* ── THEME ─────────────────────────────────────────────── */
+    :root {
+      --primary-teal:  #1e8a8a;
+      --mint-accent:   #0f6c6c;
+      --light-teal:    #e9f5f5;
+      --body-bg:       #ffffff;
+      --section-bg:    #f7fafc;
+      --heading:       #0c1e21;
+      --text:          #556c70;
+      --border:        rgba(0,0,0,0.07);
+    }
+
+    body {
+      background-color: var(--body-bg) !important;
+      color: var(--text) !important;
+      font-family: 'Inter', 'Outfit', sans-serif;
+    }
+
+    /* Header */
+    .header-area {
+      background: rgba(255,255,255,0.95) !important;
+      backdrop-filter: blur(12px) !important;
+      border-bottom: 1px solid var(--border) !important;
+    }
+    .header-area .logo img { filter: none !important; }
+    .mainmenu ul > li > a { color: var(--heading) !important; }
+    .mainmenu ul > li.active > a,
+    .mainmenu ul > li:hover > a { color: var(--primary-teal) !important; }
+
+    .tj-primary-btn {
+      background: var(--primary-teal) !important;
+      border: 1px solid var(--primary-teal) !important;
+      color: #fff !important;
+    }
+    .tj-primary-btn:hover {
+      background: transparent !important;
+      color: var(--primary-teal) !important;
+    }
+
+    /* ── HERO BREADCRUMB ────────────────────────────────────── */
+    .tj-page-header {
+      padding: 130px 0 90px;
+      background-image: url('assets/images/bg/pheader-bg.webp');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .tj-page-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(8,18,20,0.82) 0%, rgba(30,138,138,0.35) 100%);
+    }
+    .tj-page-header .container { position: relative; z-index: 2; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+      color: #8fe3e3;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge span { width: 8px; height: 8px; background: #8fe3e3; border-radius: 50%; animation: pulse 1.8s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.4; transform:scale(1.4); } }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat .num { font-size: 32px; font-weight: 800; color: #8fe3e3; }
+    .hero-stat .lbl { font-size: 12px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ── SECTION BASE ───────────────────────────────────────── */
+    .section-gap { padding: 100px 0; }
+
+    .sec-label {
+      color: var(--primary-teal);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+    .sec-h2 {
+      color: var(--heading);
+      font-size: 36px;
+      font-weight: 800;
+      margin: 12px 0 16px;
+      line-height: 1.2;
+    }
+    .sec-h2 span { color: var(--primary-teal); }
+    .sec-p { color: var(--text); font-size: 16px; line-height: 1.7; max-width: 620px; }
+
+    /* ── PRODUCT CARDS ──────────────────────────────────────── */
+    .product-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.35s ease;
+      cursor: pointer;
+      height: 100%;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+    }
+    .product-card:hover {
+      border-color: var(--primary-teal);
+      transform: translateY(-7px);
+      box-shadow: 0 20px 55px rgba(30,138,138,0.12);
+    }
+    .product-img-box {
+      height: 230px;
+      overflow: hidden;
+      position: relative;
+      background: var(--light-teal);
+    }
+    .product-img-box img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease;
+    }
+    .product-card:hover .product-img-box img { transform: scale(1.06); }
+
+    .product-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(30,138,138,0.18));
+      pointer-events: none;
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 16px; left: 16px;
+      background: var(--primary-teal);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+
+    .product-info-box { padding: 28px 30px 30px; }
+    .product-tag { color: var(--primary-teal); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
+    .product-title { color: var(--heading); font-size: 20px; font-weight: 700; margin: 10px 0 12px; }
+    .product-desc { color: var(--text); font-size: 14px; line-height: 1.65; margin-bottom: 20px; }
+
+    .product-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .product-feature-tag {
+      background: var(--light-teal);
+      color: var(--primary-teal);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(30,138,138,0.15);
+    }
+
+    .product-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary-teal);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .product-cta .cta-icon {
+      width: 34px; height: 34px;
+      background: var(--primary-teal);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    .product-card:hover .cta-icon { transform: rotate(45deg); }
+
+    /* ── HOW WE BUILD ────────────────────────────────────────── */
+    .process-section { background: var(--section-bg); }
+
+    .process-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 30px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .process-step:hover {
+      border-color: var(--primary-teal);
+      box-shadow: 0 12px 40px rgba(30,138,138,0.08);
+    }
+
+    .step-num {
+      width: 50px; height: 50px;
+      background: var(--light-teal);
+      color: var(--primary-teal);
+      font-size: 20px;
+      font-weight: 800;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-title { color: var(--heading); font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .step-desc  { color: var(--text);    font-size: 14px; line-height: 1.6; margin: 0; }
+
+    /* ── WHY VIDHAI ─────────────────────────────────────────── */
+    .why-section { background: #fff; }
+
+    .why-card {
+      text-align: center;
+      padding: 40px 28px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      transition: all 0.3s ease;
+      background: #fff;
+    }
+    .why-card:hover {
+      border-color: var(--primary-teal);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 50px rgba(30,138,138,0.10);
+    }
+
+    .why-icon {
+      width: 70px; height: 70px;
+      background: var(--light-teal);
+      color: var(--primary-teal);
+      font-size: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: all 0.3s ease;
+    }
+    .why-card:hover .why-icon { background: var(--primary-teal); color: #fff; }
+
+    .why-title { color: var(--heading); font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+    .why-desc  { color: var(--text);    font-size: 14px; line-height: 1.6; }
+
+    /* ── TECH STACK ─────────────────────────────────────────── */
+    .tech-section { background: var(--section-bg); }
+
+    .tech-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 22px;
+      color: var(--heading);
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .tech-pill:hover {
+      border-color: var(--primary-teal);
+      color: var(--primary-teal);
+      box-shadow: 0 8px 24px rgba(30,138,138,0.1);
+    }
+    .tech-pill i { color: var(--primary-teal); font-size: 18px; }
+
+    /* ── CLIENT LOGOS MARQUEE ─────────────────────────────────── */
+    .clients-section { background: #fff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; }
+
+    .marquee-wrapper { overflow: hidden; position: relative; padding: 10px 0; }
+    .marquee-wrapper::before,
+    .marquee-wrapper::after {
+      content: ''; position: absolute; top: 0; width: 120px; height: 100%; z-index: 2; pointer-events: none;
+    }
+    .marquee-wrapper::before { left: 0; background: linear-gradient(to right, #fff 0%, transparent 100%); }
+    .marquee-wrapper::after  { right: 0; background: linear-gradient(to left, #fff 0%, transparent 100%); }
+
+    .marquee-track {
+      display: flex; gap: 24px; width: max-content;
+      animation: marqueeScroll 35s linear infinite;
+    }
+    .marquee-track.reverse {
+      animation: marqueeScrollReverse 40s linear infinite;
+    }
+    .marquee-wrapper:hover .marquee-track { animation-play-state: paused; }
+
+    @keyframes marqueeScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes marqueeScrollReverse {
+      0%   { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+
+    .client-card {
+      flex-shrink: 0; width: 260px;
+      background: var(--light-teal); border: 1px solid rgba(30,138,138,0.12);
+      border-radius: 16px; padding: 24px 20px;
+      display: flex; align-items: center; gap: 16px;
+      transition: all 0.35s ease; cursor: default;
+    }
+    .client-card:hover {
+      background: var(--primary-teal); border-color: var(--primary-teal);
+      transform: translateY(-4px); box-shadow: 0 12px 32px rgba(30,138,138,0.18);
+    }
+    .client-card-logo {
+      width: 52px; height: 52px; border-radius: 12px; overflow: hidden;
+      background: #fff; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .client-card-logo img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+    .client-card-info h4 { color: var(--heading); font-size: 14px; font-weight: 700; margin: 0 0 4px; white-space: nowrap; }
+    .client-card-info span { color: var(--text); font-size: 12px; display: block; white-space: nowrap; }
+    .client-card:hover .client-card-info h4 { color: #fff; }
+    .client-card:hover .client-card-info span { color: rgba(255,255,255,0.75); }
+
+    /* ── CTA BANNER ─────────────────────────────────────────── */
+    .cta-banner {
+      background: linear-gradient(135deg, #1e8a8a 0%, #0f6c6c 100%);
+      border-radius: 20px;
+      padding: 70px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+    }
+    .cta-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -60px;
+      width: 280px; height: 280px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+    }
+
+    .cta-banner h2 { color: #fff; font-size: 38px; font-weight: 800; margin-bottom: 16px; }
+    .cta-banner p  { color: rgba(255,255,255,0.82); font-size: 17px; max-width: 580px; margin: 0 auto 35px; }
+
+    .cta-btn-white {
+      background: #fff;
+      color: var(--primary-teal);
+      border: none;
+      padding: 16px 40px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+    }
+    .cta-btn-white:hover { background: var(--heading); color: #fff; }
+
+    .cta-btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.4);
+      padding: 14px 36px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      margin-left: 16px;
+    }
+    .cta-btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); color: #fff; }
+
+    /* ── DRAWER ─────────────────────────────────────────────── */
+    .service-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(5px);
+      z-index: 9998;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+    }
+    .service-drawer-overlay.active { opacity: 1; visibility: visible; }
+
+    .service-drawer {
+      position: fixed;
+      top: 0; right: -460px;
+      width: 460px;
+      height: 100%;
+      background: #0c1e21;
+      border-left: 1px solid rgba(255,255,255,0.08);
+      box-shadow: -10px 0 40px rgba(0,0,0,0.5);
+      z-index: 9999;
+      padding: 45px 40px;
+      overflow-y: auto;
+      transition: all 0.45s cubic-bezier(0.16,1,0.3,1);
+    }
+    @media (max-width:576px) { .service-drawer { width:100%; right:-100%; } }
+    .service-drawer.active { right: 0; }
+
+    .drawer-close-btn {
+      position: absolute;
+      top: 18px; right: 22px;
+      font-size: 32px;
+      background: none; border: none;
+      color: #a9b8b8; cursor: pointer;
+      line-height: 1;
+    }
+    .drawer-close-btn:hover { color: #fff; }
+    .drawer-title  { font-size: 26px; font-weight: 800; color: #fff; margin: 20px 0 16px; }
+    .drawer-desc   { color: #d1e2e2; font-size: 15px; line-height: 1.65; margin-bottom: 28px; }
+    .drawer-section-title {
+      font-size: 14px; font-weight: 700; color: #fff;
+      text-transform: uppercase; letter-spacing: 1px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 8px;
+    }
+    .drawer-tags   { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+    .drawer-tag    { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: #8fe3e3; padding: 5px 14px; border-radius: 20px; font-size: 13px; }
+    .colab-item    { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; margin-bottom: 12px; }
+    .colab-title   { color: #fff; font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .colab-desc    { color: #a9b8b8; font-size: 13px; margin: 0; line-height: 1.5; }
+
+    /* Footer */
+    .tj-footer-section { background-color: #081214 !important; }
+  </style>
+</head>
+
+<body>
+  <div class="body-overlay"></div>
+
+  <!-- Preloader -->
+  <div class="tj-preloader is-loading">
+    <div class="tj-preloader-inner">
+      <div class="tj-preloader-ball-wrap">
+        <div class="tj-preloader-ball-inner-wrap">
+          <div class="tj-preloader-ball-inner"><div class="tj-preloader-ball"></div></div>
+          <div class="tj-preloader-ball-shadow"></div>
+        </div>
+        <div id="tj-weave-anim" class="tj-preloader-text">Vidhai AI Solutions</div>
+      </div>
+    </div>
+    <div class="tj-preloader-overlay"></div>
+  </div>
+
+  <div id="tj-back-to-top"><span id="tj-back-to-top-percentage"></span></div>
+
+  <!-- Offcanvas -->
+  <div class="tj-offcanvas-area d-none d-lg-block">
+    <div class="hamburger_bg"></div>
+    <div class="hamburger_wrapper">
+      <div class="hamburger_inner">
+        <div class="hamburger_top d-flex align-items-center justify-content-between">
+          <div class="hamburger_logo">
+            <a href="index.html" class="mobile_logo">
+              <img src="assets/images/logo/vidhailogobg.png" alt="Logo" style="height:55px;width:auto;object-fit:contain;">
+            </a>
+          </div>
+          <div class="hamburger_close"><button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button></div>
+        </div>
+        <div class="offcanvas-text">
+          <p>Vidhai AI Solutions — building enterprise software, ERP systems, and AI-powered tools for local businesses across Tamil Nadu.</p>
+        </div>
+        <div class="hamburger-infos">
+          <h5 class="hamburger-title">Contact Info</h5>
+          <div class="contact-info">
+            <div class="contact-item"><span class="subtitle">Phone</span><a class="contact-link" href="tel:9345504199">+91 9345504199</a></div>
+            <div class="contact-item"><span class="subtitle">Email</span><a class="contact-link" href="mailto:aividhai26@gmail.com">aividhai26@gmail.com</a></div>
+            <div class="contact-item"><span class="subtitle">Location</span><span class="contact-link">no7, muthu nagar, sidco road, tiruppur 641606</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="hamburger-area d-lg-none">
+    <div class="hamburger_bg"></div>
+    <div class="hamburger_wrapper">
+      <div class="hamburger_inner">
+        <div class="hamburger_top d-flex align-items-center justify-content-between">
+          <div class="hamburger_logo">
+            <a href="index.html" class="mobile_logo">
+              <img src="assets/images/logo/vidhailogobg.png" alt="Logo" style="height:55px;width:auto;">
+            </a>
+          </div>
+          <div class="hamburger_close"><button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button></div>
+        </div>
+        <div class="hamburger_menu"><div class="mobile_menu"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header-area header-2 header-absolute section-gap-x">
+    <div class="container-fluid">
+      <div class="row"><div class="col-12">
+        <div class="header-wrapper">
+          <div class="site_logo">
+            <a class="logo" href="index.html">
+              <img src="assets/images/logo/vidhailogobg.png" alt="Vidhai AI Logo" style="height:50px;width:auto;object-fit:contain;">
+            </a>
+          </div>
+          <div class="menu-area d-none d-lg-inline-flex align-items-center">
+            <nav id="mobile-menu" class="mainmenu">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li class="active"><a href="vidhai-services.html">Vidhai Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-right-item d-none d-lg-inline-flex">
+            <div class="header-button">
+              <a class="tj-primary-btn" href="contact.html">
+                <span class="btn-text"><span>Let's Talk</span></span>
+                <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+              </a>
+            </div>
+            <div class="menu_bar menu_offcanvas d-none d-lg-inline-flex"><span></span><span></span><span></span></div>
+          </div>
+          <div class="menu_bar mobile_menu_bar d-lg-none"><span></span><span></span><span></span></div>
+        </div>
+      </div></div>
+    </div>
+  </header>
+
+  <!-- Sticky Header -->
+  <header class="header-area header-2 header-duplicate header-sticky section-gap-x">
+    <div class="container-fluid">
+      <div class="row"><div class="col-12">
+        <div class="header-wrapper">
+          <div class="site_logo">
+            <a class="logo" href="index.html">
+              <img src="assets/images/logo/vidhailogobg.png" alt="Vidhai AI Logo" style="height:50px;width:auto;object-fit:contain;">
+            </a>
+          </div>
+          <div class="menu-area d-none d-lg-inline-flex align-items-center">
+            <nav class="mainmenu">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li class="active"><a href="vidhai-services.html">Vidhai Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-right-item d-none d-lg-inline-flex">
+            <div class="header-button">
+              <a class="tj-primary-btn" href="contact.html">
+                <span class="btn-text"><span>Let's Talk</span></span>
+                <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="menu_bar mobile_menu_bar d-lg-none"><span></span><span></span><span></span></div>
+        </div>
+      </div></div>
+    </div>
+  </header>
+
+  <div id="smooth-wrapper"><div id="smooth-content">
+  <main id="primary" class="site-main">
+    <div class="top-space-15"></div>
+
+    <!-- ══════════════════════════════════════════════════════
+         HERO / BREADCRUMB
+    ══════════════════════════════════════════════════════ -->
+    <!-- ══════════════════════════════════════════════════════
+         HERO / BREADCRUMB
+    ══════════════════════════════════════════════════════ -->
+    <section class="tj-page-header section-gap-x" data-bg-image="assets/images/bg/pheader-bg.webp" style="background-image: url('assets/images/bg/pheader-bg.webp'); background-size: cover; background-position: center; position: relative;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="tj-page-header-content text-center" style="position: relative; z-index: 5;">
+              <h1 class="tj-page-title" style="color: #ffffff; font-size: 48px; font-weight: 800; margin-bottom: 15px;">Vidhai Services</h1>
+              <div class="tj-page-link" style="color: #a9b8b8; font-size: 16px;">
+                <span><a href="index.html" style="color: var(--primary-teal); text-decoration: none;"><i class="tji-home" style="margin-right: 5px;"></i>Home</a></span>
+                <span style="margin: 0 10px;"><i class="fa-solid fa-chevron-right"></i></span>
+                <span>Vidhai Services</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-header-overlay" data-bg-image="assets/images/shape/pheader-overlay.webp" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.85; z-index: 1;"></div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         PRODUCT GRID  (click to open drawer)
+    ══════════════════════════════════════════════════════ -->
+    <section class="section-gap" style="background: var(--section-bg);">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-7">
+            <span class="sec-label">Software Ecosystems</span>
+            <h2 class="sec-h2">Our Enterprise-Grade <span>Custom Systems</span></h2>
+            <p class="sec-p">Click any system card below to explore the full technical architecture, integrations, and real client results behind each product.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+
+          <!-- Card 1: Custom CRM & Lead Portals -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="product-card wow fadeInUp" data-wow-delay=".2s" data-service-id="construction-crm">
+              <div class="product-img-box">
+                <div class="product-badge">CRM &amp; Billing</div>
+                <img src="assets/images/vidhaiimages/Thendral City CRM Interface Preview.webp" alt="Thendral City CRM Interface">
+                <div class="product-badge" style="top: 16px; left: auto; right: 16px; background: #fff; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+                  <img src="assets/images/logo/tcdp_logo_bg.png" alt="Thendral City Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
+                </div>
+                <div class="product-img-overlay"></div>
+              </div>
+              <div class="product-info-box">
+                <span class="product-tag">CRM &amp; Lead Management</span>
+                <h4 class="product-title">Custom CRM &amp; Lead Portals</h4>
+                <p class="product-desc">Tailored database engines with material invoice auditing, supervisor payout grids, and live site budget dashboards — eliminating manual spreadsheet errors.</p>
+                <div class="product-features">
+                  <span class="product-feature-tag">Invoice Auditing</span>
+                  <span class="product-feature-tag">Payout Grids</span>
+                  <span class="product-feature-tag">Material Webhooks</span>
+                  <span class="product-feature-tag">Daily Logs</span>
+                </div>
+                <div class="product-cta">
+                  <span>View Details</span>
+                  <span class="cta-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Custom School & Academic ERPs -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="product-card wow fadeInUp" data-wow-delay=".4s" data-service-id="school-erp">
+              <div class="product-img-box">
+                <div class="product-badge">ERP &amp; Database</div>
+                <img src="assets/images/vidhaiimages/KMS School ERP Interface Preview.webp" alt="KMS School ERP Interface">
+                <div class="product-badge" style="top: 16px; left: auto; right: 16px; background: #fff; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+                  <img src="assets/images/logo/Kms.logo.jpg" alt="KMS Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
+                </div>
+                <div class="product-img-overlay"></div>
+              </div>
+              <div class="product-info-box">
+                <span class="product-tag">School &amp; Education ERP</span>
+                <h4 class="product-title">Custom School &amp; Academic ERPs</h4>
+                <p class="product-desc">Unified administrative school portals coordinating student registers, fee receipt databases, automated bus route trackers, and parent notifications.</p>
+                <div class="product-features">
+                  <span class="product-feature-tag">Fee Collection</span>
+                  <span class="product-feature-tag">SMS/WhatsApp Alerts</span>
+                  <span class="product-feature-tag">Bus Route Tracker</span>
+                  <span class="product-feature-tag">Student Database</span>
+                </div>
+                <div class="product-cta">
+                  <span>View Details</span>
+                  <span class="cta-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Automated Billing & Inventory Portals -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="product-card wow fadeInUp" data-wow-delay=".6s" data-service-id="billing-systems">
+              <div class="product-img-box">
+                <div class="product-badge">Billing &amp; Accounting</div>
+                <img src="assets/images/vidhaiimages/Vidhai Enterprise Software Dashboard Showcase mockup.webp" alt="Billing Dashboard">
+                <div class="product-badge" style="top: 16px; left: auto; right: 16px; background: #fff; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+                  <img src="assets/images/logo/Spm.webp" alt="SPM Agencies Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
+                </div>
+                <div class="product-img-overlay"></div>
+              </div>
+              <div class="product-info-box">
+                <span class="product-tag">Billing &amp; Inventory</span>
+                <h4 class="product-title">Automated Billing &amp; Inventory Portals</h4>
+                <p class="product-desc">Complete billing ledger systems featuring integrated sales logs, inventory tracking, PDF invoice auto-generation, and encrypted financial registries.</p>
+                <div class="product-features">
+                  <span class="product-feature-tag">PDF Auto-Billing</span>
+                  <span class="product-feature-tag">Inventory Sync</span>
+                  <span class="product-feature-tag">Live Accounting</span>
+                  <span class="product-feature-tag">Multi-branch Reports</span>
+                </div>
+                <div class="product-cta">
+                  <span>View Details</span>
+                  <span class="cta-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         HOW WE BUILD — PROCESS STEPS
+    ══════════════════════════════════════════════════════ -->
+    <section class="section-gap process-section">
+      <div class="container">
+        <div class="row mb-5 text-center">
+          <div class="col-12">
+            <span class="sec-label">Our Methodology</span>
+            <h2 class="sec-h2">How We <span>Build Your System</span></h2>
+            <p class="sec-p mx-auto" style="text-align:center;">A structured, transparent delivery process — from business audit to go-live support.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+            <div class="process-step">
+              <div class="step-num">01</div>
+              <div>
+                <h5 class="step-title">Business Audit</h5>
+                <p class="step-desc">We map your workflows, data structures, and pain points through direct stakeholder interviews.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+            <div class="process-step">
+              <div class="step-num">02</div>
+              <div>
+                <h5 class="step-title">Architecture Design</h5>
+                <p class="step-desc">We propose a scalable database schema, role-based access structure, and API layer design.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+            <div class="process-step">
+              <div class="step-num">03</div>
+              <div>
+                <h5 class="step-title">Agile Development</h5>
+                <p class="step-desc">Sprint-based builds with weekly demos and client review cycles — no surprise deliverables.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+            <div class="process-step">
+              <div class="step-num">04</div>
+              <div>
+                <h5 class="step-title">Deployment &amp; SLA</h5>
+                <p class="step-desc">Go-live on cloud or on-premise with staff training, documentation, and 3-month SLA support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         WHY CHOOSE VIDHAI — VALUE PROPS
+    ══════════════════════════════════════════════════════ -->
+    <section class="section-gap why-section">
+      <div class="container">
+        <div class="row mb-5 text-center">
+          <div class="col-12">
+            <span class="sec-label">Why Vidhai</span>
+            <h2 class="sec-h2">Built Different, <span>Delivered Faster</span></h2>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".1s">
+            <div class="why-card">
+              <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
+              <h5 class="why-title">Rapid Delivery</h5>
+              <p class="why-desc">Most systems delivered in 4–8 weeks using proven MERN stack templates and reusable modules.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
+            <div class="why-card">
+              <div class="why-icon"><i class="fa-solid fa-lock"></i></div>
+              <h5 class="why-title">Role-Based Security</h5>
+              <p class="why-desc">Every system ships with fine-grained permissions — admin, manager, and staff roles out of the box.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+            <div class="why-card">
+              <div class="why-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+              <h5 class="why-title">Mobile-Responsive</h5>
+              <p class="why-desc">All portals work seamlessly on mobile devices — perfect for on-site supervisors and field teams.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
+            <div class="why-card">
+              <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
+              <h5 class="why-title">Ongoing Support</h5>
+              <p class="why-desc">3-month post-delivery SLA with bug fixes, staff training, and feature enhancement rounds included.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".5s">
+            <div class="why-card">
+              <div class="why-icon"><i class="fa-solid fa-robot"></i></div>
+              <h5 class="why-title">AI-Ready Architecture</h5>
+              <p class="why-desc">Systems built with AI plug-in points — chatbot layers, ML analytics, and automation hooks.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".6s">
+            <div class="why-card">
+              <div class="why-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <h5 class="why-title">Real-Time Dashboards</h5>
+              <p class="why-desc">Live metrics, KPI tracking, and exportable reports embedded directly into the product interface.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".7s">
+            <div class="why-card">
+              <div class="why-icon"><i class="fa-solid fa-database"></i></div>
+              <h5 class="why-title">Encrypted Data</h5>
+              <p class="why-desc">End-to-end encryption, secure backups, and GDPR-aligned data handling as standard practice.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".8s">
+            <div class="why-card">
+              <div class="why-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+              <h5 class="why-title">Affordable Pricing</h5>
+              <p class="why-desc">Enterprise-grade systems at Tamil Nadu SME budgets — no vendor lock-in, no hidden licensing fees.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         TECH STACK
+    ══════════════════════════════════════════════════════ -->
+    <section class="section-gap tech-section">
+      <div class="container">
+        <div class="row mb-5 text-center">
+          <div class="col-12">
+            <span class="sec-label">Technology Stack</span>
+            <h2 class="sec-h2">Tools We <span>Build With</span></h2>
+            <p class="sec-p mx-auto" style="text-align:center;">Industry-standard, battle-tested technologies for reliable, high-performance software systems.</p>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap gap-3 justify-content-center wow fadeInUp" data-wow-delay=".3s">
+          <div class="tech-pill"><i class="fa-brands fa-react"></i> React.js &amp; Next.js</div>
+          <div class="tech-pill"><i class="fa-brands fa-node-js"></i> Node.js &amp; Express</div>
+          <div class="tech-pill"><i class="fa-solid fa-database"></i> MongoDB &amp; PostgreSQL</div>
+          <div class="tech-pill"><i class="fa-brands fa-python"></i> Python &amp; FastAPI</div>
+          <div class="tech-pill"><i class="fa-solid fa-brain"></i> LangChain / RAG</div>
+          <div class="tech-pill"><i class="fa-solid fa-file-pdf"></i> PDF Invoice Auto-Gen</div>
+          <div class="tech-pill"><i class="fa-solid fa-bell"></i> SMS &amp; WhatsApp Alerts</div>
+          <div class="tech-pill"><i class="fa-solid fa-shield-halved"></i> Role-Based Auth (JWT)</div>
+          <div class="tech-pill"><i class="fa-brands fa-aws"></i> AWS S3 &amp; EC2</div>
+          <div class="tech-pill"><i class="fa-solid fa-chart-bar"></i> Power BI Embed</div>
+          <div class="tech-pill"><i class="fa-solid fa-code-branch"></i> GitHub CI/CD Pipelines</div>
+          <div class="tech-pill"><i class="fa-solid fa-cloud"></i> Vercel &amp; Railway Deploy</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         CLIENT LOGOS — ANIMATED MARQUEE
+    ══════════════════════════════════════════════════════ -->
+    <section class="section-gap clients-section">
+      <div class="container">
+        <div class="row mb-5 text-center">
+          <div class="col-12">
+            <span class="sec-label">Trusted By</span>
+            <h2 class="sec-h2">Businesses We've <span>Empowered</span></h2>
+            <p class="sec-p" style="max-width:600px;margin:0 auto;">Partnering with enterprises, schools, and startups across Tamil Nadu to deliver transformative digital solutions.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 1 — scrolls left -->
+      <div class="marquee-wrapper" style="margin-bottom:20px;">
+        <div class="marquee-track">
+          <!-- Set 1 -->
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/tcdp_logo_bg.png" alt="Thendral City"></div>
+            <div class="client-card-info"><h4>Thendral City Developers</h4><span>Construction CRM</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/Kms.logo.jpg" alt="KMS"></div>
+            <div class="client-card-info"><h4>Kongu Matriculation School</h4><span>School ERP</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/Spm.webp" alt="SPM"></div>
+            <div class="client-card-info"><h4>SPM Agencies</h4><span>Billing &amp; Inventory Portal</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/dreamsinfinite.webp" alt="Dreams Infinite"></div>
+            <div class="client-card-info"><h4>Dreams Infinite Photography</h4><span>Portfolio &amp; Booking Web App</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/solevnix.webp" alt="Solvenix"></div>
+            <div class="client-card-info"><h4>Solvenix Techwork</h4><span>ML Analytics Pipeline</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/BuildXRobotix_logo.webp" alt="BuildX Robotix"></div>
+            <div class="client-card-info"><h4>BuildX Robotix</h4><span>Robotics Lab Platform</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/tprplates.webp" alt="TPR Plates"></div>
+            <div class="client-card-info"><h4>Tirupur Plates &amp; Decorators</h4><span>Service Portfolio &amp; Booking</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/skycrestlogo.png" alt="Skycrest"></div>
+            <div class="client-card-info"><h4>Skycrest Solutions</h4><span>Custom Digital Portals</span></div>
+          </div>
+          <!-- Set 2 (duplicate for seamless loop) -->
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/tcdp_logo_bg.png" alt="Thendral City"></div>
+            <div class="client-card-info"><h4>Thendral City Developers</h4><span>Construction CRM</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/Kms.logo.jpg" alt="KMS"></div>
+            <div class="client-card-info"><h4>Kongu Matriculation School</h4><span>School ERP</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/Spm.webp" alt="SPM"></div>
+            <div class="client-card-info"><h4>SPM Agencies</h4><span>Billing &amp; Inventory Portal</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/dreamsinfinite.webp" alt="Dreams Infinite"></div>
+            <div class="client-card-info"><h4>Dreams Infinite Photography</h4><span>Portfolio &amp; Booking Web App</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/solevnix.webp" alt="Solvenix"></div>
+            <div class="client-card-info"><h4>Solvenix Techwork</h4><span>ML Analytics Pipeline</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/BuildXRobotix_logo.webp" alt="BuildX Robotix"></div>
+            <div class="client-card-info"><h4>BuildX Robotix</h4><span>Robotics Lab Platform</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/tprplates.webp" alt="TPR Plates"></div>
+            <div class="client-card-info"><h4>Tirupur Plates &amp; Decorators</h4><span>Service Portfolio &amp; Booking</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/skycrestlogo.png" alt="Skycrest"></div>
+            <div class="client-card-info"><h4>Skycrest Solutions</h4><span>Custom Digital Portals</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 2 — scrolls right (reverse) -->
+      <div class="marquee-wrapper">
+        <div class="marquee-track reverse">
+          <!-- Set 1 -->
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/alnatik_logo.jpg" alt="Alnatik"></div>
+            <div class="client-card-info"><h4>Alnatik Solutions</h4><span>Business Automation</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/HappyBondinglogo.png" alt="Happy Bonding"></div>
+            <div class="client-card-info"><h4>Happy Bonding</h4><span>Event Management Portal</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/DKpaqua&pets.png" alt="DKP Aqua"></div>
+            <div class="client-card-info"><h4>DKP Aqua &amp; Pets</h4><span>E-Commerce Platform</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/royalpackers and movers.png" alt="Royal Packers"></div>
+            <div class="client-card-info"><h4>Royal Packers &amp; Movers</h4><span>Logistics Management</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/AI (3).png" alt="Kangeyam Institute"></div>
+            <div class="client-card-info"><h4>Kangeyam Institute</h4><span>Internship &amp; ERP Bootcamp</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/vidhailogobg.png" alt="Local SMEs"></div>
+            <div class="client-card-info"><h4>Local SMEs &amp; Retailers</h4><span>Custom Digital Portals</span></div>
+          </div>
+          <!-- Set 2 (duplicate for seamless loop) -->
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/alnatik_logo.jpg" alt="Alnatik"></div>
+            <div class="client-card-info"><h4>Alnatik Solutions</h4><span>Business Automation</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/HappyBondinglogo.png" alt="Happy Bonding"></div>
+            <div class="client-card-info"><h4>Happy Bonding</h4><span>Event Management Portal</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/DKpaqua&pets.png" alt="DKP Aqua"></div>
+            <div class="client-card-info"><h4>DKP Aqua &amp; Pets</h4><span>E-Commerce Platform</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/royalpackers and movers.png" alt="Royal Packers"></div>
+            <div class="client-card-info"><h4>Royal Packers &amp; Movers</h4><span>Logistics Management</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/AI (3).png" alt="Kangeyam Institute"></div>
+            <div class="client-card-info"><h4>Kangeyam Institute</h4><span>Internship &amp; ERP Bootcamp</span></div>
+          </div>
+          <div class="client-card">
+            <div class="client-card-logo"><img src="assets/images/logo/vidhailogobg.png" alt="Local SMEs"></div>
+            <div class="client-card-info"><h4>Local SMEs &amp; Retailers</h4><span>Custom Digital Portals</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         TESTIMONIALS SECTION
+    ══════════════════════════════════════════════════════ -->
+    <section class="tj-testimonial-section-2 section-gap" style="background: var(--section-bg); padding: 100px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+      <div class="container">
+        <div class="row align-items-center row-gap-5">
+          <div class="col-lg-6 order-lg-2">
+            <div class="testimonial-img-area wow fadeInUp" data-wow-delay=".3s" style="position: relative;">
+              <div class="testimonial-img" style="border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(30,138,138,0.15);">
+                <img src="assets/images/testimonial/studenttestimonials.webp" alt="Vidhai Guidance Testimonial" style="width: 100%; max-height: 480px; object-fit: cover;">
+              </div>
+              <div class="box-area" style="position: absolute; bottom: -30px; right: 20px;">
+                <div class="rating-box wow fadeInUp" data-wow-delay=".5s" style="padding: 20px; text-align: center; background: var(--primary-teal); color: #fff; border-radius: 8px; box-shadow: 0 5px 20px rgba(30,138,138,0.3);">
+                  <h2 class="title" style="color: #fff; font-weight: 800; font-size: 36px; margin: 0;">50+</h2>
+                  <span class="rating-text" style="font-weight: 700; font-size: 13px; display: block; margin-top: 5px; color: #8fe3e3;">Enterprises Partnered</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="testimonial-wrapper wow fadeInUp" data-wow-delay=".5s">
+              <div class="sec-heading mb-4">
+                <span class="sec-label" style="color: var(--primary-teal); font-weight: 600; text-transform: uppercase;">Client Feedback</span>
+                <h2 style="color: var(--heading); font-size: 36px; font-weight: 800; margin: 12px 0 16px;">What Our Partners <span>Say.</span></h2>
+              </div>
+              <div class="swiper testimonial-slider-2">
+                <div class="swiper-wrapper">
+                  <!-- Testimonial 1 -->
+                  <div class="swiper-slide">
+                    <div class="testimonial-item" style="background: #fff; border: 1px solid var(--border); padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                      <span class="quote-icon" style="font-size: 24px; color: var(--primary-teal); display: block; margin-bottom: 15px;"><i class="tji-quote"></i></span>
+                      <div class="desc" style="color: var(--text); font-size: 15px; line-height: 1.65; font-style: italic; margin-bottom: 20px;">
+                        <p>"The materials tracker and site supervisor logging app built by Vidhai CRM team saved us hours of ledger verification. The codebase is incredibly fast and responsive."</p>
+                      </div>
+                      <div class="testimonial-author">
+                        <div class="author-inner d-flex align-items-center gap-3">
+                          <div class="author-img" style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; background: #fff; border: 2px solid var(--primary-teal); padding: 3px;">
+                            <img src="assets/images/logo/tcdp_logo_bg.png" alt="Thendral City Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                          </div>
+                          <div class="author-header">
+                            <h4 class="title" style="font-size: 16px; font-weight: 700; margin: 0; color: var(--heading);">Thendral City Developers &amp; Promoters</h4>
+                            <span class="designation" style="font-size: 13px; color: var(--primary-teal);">CRM Management Client</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Testimonial 2 -->
+                  <div class="swiper-slide">
+                    <div class="testimonial-item" style="background: #fff; border: 1px solid var(--border); padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                      <span class="quote-icon" style="font-size: 24px; color: var(--primary-teal); display: block; margin-bottom: 15px;"><i class="tji-quote"></i></span>
+                      <div class="desc" style="color: var(--text); font-size: 15px; line-height: 1.65; font-style: italic; margin-bottom: 20px;">
+                        <p>"Vidhai AI Solutions delivered a custom School ERP platform that streamlined our invoices and registration databases. Their guiding mentors and developer teams demonstrated exceptional tech capabilities."</p>
+                      </div>
+                      <div class="testimonial-author">
+                        <div class="author-inner d-flex align-items-center gap-3">
+                          <div class="author-img" style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; background: #fff; border: 2px solid var(--primary-teal); padding: 3px;">
+                            <img src="assets/images/logo/Kms.logo.jpg" alt="KMS Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                          </div>
+                          <div class="author-header">
+                            <h4 class="title" style="font-size: 16px; font-weight: 700; margin: 0; color: var(--heading);">Kongu Matriculation School</h4>
+                            <span class="designation" style="font-size: 13px; color: var(--primary-teal);">ERP Software Client</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Testimonial 3 -->
+                  <div class="swiper-slide">
+                    <div class="testimonial-item" style="background: #fff; border: 1px solid var(--border); padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                      <span class="quote-icon" style="font-size: 24px; color: var(--primary-teal); display: block; margin-bottom: 15px;"><i class="tji-quote"></i></span>
+                      <div class="desc" style="color: var(--text); font-size: 15px; line-height: 1.65; font-style: italic; margin-bottom: 20px;">
+                        <p>"Vidhai AI Solutions built an extremely fast, high-performance photography portfolio website for us. The gallery transitions are seamless and our client bookings have significantly increased."</p>
+                      </div>
+                      <div class="testimonial-author">
+                        <div class="author-inner d-flex align-items-center gap-3">
+                          <div class="author-img" style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; background: #fff; border: 2px solid var(--primary-teal); padding: 3px;">
+                            <img src="assets/images/logo/dreamsinfinite.webp" alt="Dreams Infinite Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                          </div>
+                          <div class="author-header">
+                            <h4 class="title" style="font-size: 16px; font-weight: 700; margin: 0; color: var(--heading);">Dreams Infinite Photography</h4>
+                            <span class="designation" style="font-size: 13px; color: var(--primary-teal);">Web Development Client</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination-area mt-4" style="text-align: center;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         CUSTOM PROBLEM / QUOTE SECTION
+    ══════════════════════════════════════════════════════ -->
+    <section class="section-gap" style="background: #ffffff; padding: 100px 0;">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".3s">
+            <span class="sec-label" style="color: var(--primary-teal); font-weight: 600; text-transform: uppercase;">Unique Challenges</span>
+            <h2 style="color: var(--heading); font-size: 38px; font-weight: 800; margin: 15px 0 20px; line-height: 1.25;">Have a Custom Problem?<br><span>Tell Us!</span></h2>
+            <p style="color: var(--text); font-size: 16px; line-height: 1.7; margin-bottom: 25px;">
+              Standard software platforms often fail to fit the nuanced operations of your business. We specialize in engineering bespoke solutions tailored specifically to your unique workflow challenges.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 0 0 35px 0;">
+              <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; color: var(--heading); font-weight: 600; font-size: 15px;">
+                <span style="color: var(--primary-teal); font-size: 18px;"><i class="fa-solid fa-circle-check"></i></span>
+                Bespoke database engines and custom ERP/CRM layouts
+              </li>
+              <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; color: var(--heading); font-weight: 600; font-size: 15px;">
+                <span style="color: var(--primary-teal); font-size: 18px;"><i class="fa-solid fa-circle-check"></i></span>
+                Custom API integrations and third-party software sync
+              </li>
+              <li style="display: flex; align-items: center; gap: 12px; color: var(--heading); font-weight: 600; font-size: 15px;">
+                <span style="color: var(--primary-teal); font-size: 18px;"><i class="fa-solid fa-circle-check"></i></span>
+                Legacy database modernization and cloud migration
+              </li>
+            </ul>
+            <a href="contact.html" class="tj-primary-btn">
+              <span class="btn-text"><span>Request a Custom Quote</span></span>
+              <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+            </a>
+          </div>
+          <div class="col-lg-6 wow fadeInRight" data-wow-delay=".5s">
+            <div style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 15px 40px rgba(0,0,0,0.05);">
+              <img src="assets/images/vidhaiimages/Vidhai Customer Support Mockup.webp" alt="Vidhai Customer Support Mockup" style="width: 100%; height: auto; display: block; object-fit: cover; max-height: 450px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         CTA BANNER  (replaces the form section)
+    ══════════════════════════════════════════════════════ -->
+    <section class="section-gap" style="background: var(--body-bg);">
+      <div class="container">
+        <div class="cta-banner wow fadeInUp" data-wow-delay=".3s">
+          <h2>Ready to Build Your Custom System?</h2>
+          <p>Describe your business problem and our team will send you a free architectural proposal within 48 hours — no obligation.</p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap" style="position:relative;z-index:2;">
+            <a href="contact.html" class="cta-btn-white">
+              <i class="fa-solid fa-paper-plane"></i> Request a Free Proposal
+            </a>
+            <a href="service.html" class="cta-btn-outline">
+              <i class="fa-solid fa-grid-2"></i> View All Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="tj-footer-section footer-1 section-gap-x" style="padding: 80px 0 30px; background: #081214; border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-widget">
+            <img src="assets/images/logo/vidhailogobg.png" alt="Logo" style="height: 60px; width: auto; object-fit: contain; margin-bottom: 25px;">
+            <p style="color: #a9b8b8; line-height: 1.6;">Empowering local enterprises with high-performance digital tools, machine learning insights, and enterprise automation.</p>
+            <div class="social-links d-flex gap-3 mt-4">
+              <a href="https://www.instagram.com/vidhai_ai_solutions?igsh=MnN3NDM2MzkxOXdy" target="_blank" style="background: rgba(255, 255, 255, 0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/vidhai-ai-solutions" target="_blank" style="background: rgba(255, 255, 255, 0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-widget">
+            <h4 style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 25px;">Quick Links</h4>
+            <div class="row">
+              <div class="col-6">
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                  <li style="margin-bottom: 12px;"><a href="index.html" style="color: #a9b8b8; text-decoration: none;">Home</a></li>
+                  <li style="margin-bottom: 12px;"><a href="about.html" style="color: #a9b8b8; text-decoration: none;">About</a></li>
+                  <li style="margin-bottom: 12px;"><a href="service.html" style="color: #a9b8b8; text-decoration: none;">Services</a></li>
+                  <li style="margin-bottom: 12px;"><a href="contact.html" style="color: #a9b8b8; text-decoration: none;">Contact</a></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                  <li style="margin-bottom: 12px;"><a href="vidhai-services.html" style="color: #a9b8b8; text-decoration: none;">Custom Service</a></li>
+                  <li style="margin-bottom: 12px;"><a href="faq.html" style="color: #a9b8b8; text-decoration: none;">FAQ</a></li>
+                  <li style="margin-bottom: 12px;"><a href="careers.html" style="color: #a9b8b8; text-decoration: none;">Programs</a></li>
+                  <li style="margin-bottom: 12px;"><a href="service.html" style="color: #a9b8b8; text-decoration: none;">Software Services</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-widget">
+            <h4 style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 25px;">Our Branches</h4>
+            <p style="color: #a9b8b8; margin-bottom: 10px; font-size: 13px; line-height: 1.4;"><i class="fa-solid fa-map-pin" style="color: var(--primary-teal); margin-right: 10px;"></i> <strong>Tiruppur (HO):</strong> no7, muthu nagar, sidco road, tiruppur 641606</p>
+            <p style="color: #a9b8b8; margin-bottom: 15px; font-size: 13px; line-height: 1.4;"><i class="fa-solid fa-map-pin" style="color: var(--primary-teal); margin-right: 10px;"></i> <strong>Hosur Branch:</strong> 2/339, 2nd St, Kamaraj Nagar, Leyland, Hosur 635126</p>
+            <p style="color: #a9b8b8; margin-bottom: 10px;"><i class="fa-solid fa-phone" style="color: var(--primary-teal); margin-right: 10px;"></i> +91 9345504199</p>
+            <p style="color: #a9b8b8; margin-bottom: 15px;"><i class="fa-solid fa-envelope" style="color: var(--primary-teal); margin-right: 10px;"></i> aividhai26@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-widget">
+            <h4 style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 25px;">Newsletter</h4>
+            <p style="color: #a9b8b8; margin-bottom: 20px;">Subscribe to our newsletter for latest updates.</p>
+            <form action="#" class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+              <div class="form-group" style="position: relative; margin-bottom: 15px;">
+                <input type="email" placeholder="Your Email" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; padding: 12px 15px; width: 100%; border-radius: 6px; font-size: 14px;" required>
+                <button type="submit" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: var(--primary-teal); border: none; color: #fff; width: 35px; height: 35px; border-radius: 4px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;"><i class="fa-solid fa-paper-plane"></i></button>
+              </div>
+              <div class="form-check d-flex align-items-start gap-2" style="margin: 0; padding: 0;">
+                <input type="checkbox" id="newsletter-agree" style="margin-top: 4px; cursor: pointer;" required>
+                <label for="newsletter-agree" style="color: #a9b8b8; font-size: 12px; line-height: 1.4; cursor: pointer; user-select: none;">I agree to the <a href="faq.html" style="color: var(--primary-teal); text-decoration: none;">Terms & Conditions</a></label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr style="border-top: 1px solid rgba(255,255,255,0.08); margin: 50px 0 25px;">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-md-start text-center">
+          <p style="color: #67787a; margin: 0;">&copy; 2026 <a href="index.html" style="color: var(--mint-accent); text-decoration: none;">Vidhai AI Solutions</a>. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </div></div><!-- end smooth-wrapper -->
+
+  <!-- Slide Drawer -->
+  <div class="service-drawer-overlay" id="drawerOverlay"></div>
+  <div class="service-drawer" id="serviceDrawer">
+    <button class="drawer-close-btn" id="drawerCloseBtn">&times;</button>
+    <div class="drawer-body" id="drawerBody"></div>
+  </div>
+
+  <!-- JS -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollSmoother.js"></script>
+  <script src="assets/js/gsap-scroll-to-plugin.min.js"></script>
+  <script src="assets/js/gsap-scroll-trigger.min.js"></script>
+  <script src="assets/js/gsap-split-text.min.js"></script>
+  <script src="assets/js/swiper.min.js"></script>
+  <script src="assets/js/odometer.min.js"></script>
+  <script src="assets/js/venobox.min.js"></script>
+  <script src="assets/js/appear.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/meanmenu.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const serviceDetails = {
+      'construction-crm': {
+        title: 'Custom CRM & Lead Portals',
+        desc: 'Bespoke CRM database systems built specifically to optimize material tracking, supervisor payout grids, and live site budget analytics. Features automated invoice auditing and role-based operational permissions.',
+        supports: ['MERN Stack (React, Node.js)', 'Invoicing Grid Systems', 'Material Approval Webhooks', 'Automated Daily Logs', 'AWS File Storage (S3)', 'WhatsApp Alert Integration'],
+        collaborations: [
+          { title: 'Thendral City Developers & Promoters', desc: 'Deployed construction database registry and supervisor billing modules, reducing budget leaks and saving 6+ hours of admin work per week.' }
+        ]
+      },
+      'school-erp': {
+        title: 'Custom School & Academic ERPs',
+        desc: 'Unified school administration portals designed to coordinate student registers, automate fee collection receipts, track school bus routes, and send parent SMS/WhatsApp alert notifications.',
+        supports: ['Next.js Framework', 'PostgreSQL Database', 'Role-Based Dashboards', 'SMS Gateway Integration', 'WhatsApp Notifications', 'Automated Registry Exports'],
+        collaborations: [
+          { title: 'Kongu Matriculation School', desc: 'Automated administrative student lists, bus routes tracking, and school fee records — saving 85% of office paperwork.' }
+        ]
+      },
+      'billing-systems': {
+        title: 'Automated Billing & Inventory Portals',
+        desc: 'Custom enterprise metrics software mapping sales registries, tracking invoice approvals, and integrating live accounting dashboards with Power BI analytics. Built for resellers, traders, and service businesses.',
+        supports: ['React & Node.js', 'Power BI Analytics Embed', 'MongoDB Databases', 'PDF Invoice Auto-Generation', 'Encrypted Database Registers', 'Multi-Branch Reports'],
+        collaborations: [
+          { title: 'SPM Agencies', desc: 'Integrated custom billing ledger databases and inventory trackers for official product reseller grids — improving accuracy by 95%.' },
+          { title: 'Tirupur Plates & Decorators', desc: 'Developed a service portfolio catalogue with direct automated booking ledger queries and invoice generation.' }
+        ]
+      }
+    };
+
+    $(document).ready(function () {
+      const drawer = $('#serviceDrawer');
+      const overlay = $('#drawerOverlay');
+      const drawerBody = $('#drawerBody');
+
+      $('.product-card').on('click', function () {
+        const id = $(this).data('service-id');
+        const d = serviceDetails[id];
+        if (!d) return;
+
+        const tags = d.supports.map(t => `<span class="drawer-tag">${t}</span>`).join('');
+        const colabs = d.collaborations.map(c => `<div class="colab-item"><h5 class="colab-title">${c.title}</h5><p class="colab-desc">${c.desc}</p></div>`).join('');
+
+        drawerBody.html(`
+          <h3 class="drawer-title">${d.title}</h3>
+          <p class="drawer-desc">${d.desc}</p>
+          <h4 class="drawer-section-title">Technologies Used</h4>
+          <div class="drawer-tags">${tags}</div>
+          <h4 class="drawer-section-title">Projects & Collaborations</h4>
+          <div>${colabs}</div>
+          <div style="margin-top:28px;">
+            <a class="tj-primary-btn d-block text-center py-3" href="contact.html" style="text-decoration:none;font-weight:700;">
+              <span class="btn-text"><span>Request a Custom Proposal</span></span>
+            </a>
+          </div>
+        `);
+
+        overlay.addClass('active');
+        drawer.addClass('active');
+        $('body').css('overflow', 'hidden');
+      });
+
+      function closeDrawer() {
+        drawer.removeClass('active');
+        overlay.removeClass('active');
+        $('body').css('overflow', '');
+      }
+
+      $('#drawerCloseBtn').on('click', closeDrawer);
+      overlay.on('click', closeDrawer);
+      $(document).on('keydown', function (e) { if (e.key === 'Escape') closeDrawer(); });
+
+      // Initialize Swiper testimonials
+      if ($('.testimonial-slider-2').length > 0) {
+        var testimonialSwiper = new Swiper('.testimonial-slider-2', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: '.swiper-pagination-area',
+            clickable: true,
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

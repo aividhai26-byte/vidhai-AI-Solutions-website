@@ -1,0 +1,1042 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+
+:root {
+  --tj-color-bg-1: #0c1e21;
+  --tj-color-bg-2: #081214;
+}
+
+/* 
+ * Bexon Icons Override to FontAwesome 6 Free CDN Fallbacks 
+ * This resolves the issue where bexon-icons font files are missing from the workspace.
+ */
+
+[class^="tji-"],
+[class*=" tji-"] {
+	font-family: "Font Awesome 6 Free" !important;
+	speak: never;
+	font-style: normal;
+	font-weight: 900 !important;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.tji-w-dot:before {
+	content: "\f111";
+}
+.tji-curve-arrow:before {
+	content: "\f0a9";
+}
+.tji-add-cart:before {
+	content: "\f217";
+}
+.tji-manage:before {
+	content: "\f0ad";
+}
+.tji-operations:before {
+	content: "\f085";
+}
+.tji-organize:before {
+	content: "\f0e8";
+}
+.tji-performance:before {
+	content: "\f201";
+}
+.tji-process-1:before {
+	content: "\f013";
+}
+.tji-strategy:before {
+	content: "\f0eb";
+}
+.tji-dart-board:before {
+	content: "\f140";
+}
+.tji-eye-box:before {
+	content: "\f06e";
+}
+.tji-arrow-left-long:before {
+	content: "\f177";
+}
+.tji-star-2:before {
+	content: "\f005";
+}
+.tji-star:before {
+	content: "\f005";
+}
+.tji-envelop-2:before {
+	content: "\f0e0";
+}
+.tji-quote:before {
+	content: "\f10d";
+}
+.tji-list:before {
+	content: "\f03a";
+}
+.tji-location:before {
+	content: "\f3c5";
+}
+.tji-phone-3:before {
+	content: "\f095";
+}
+.tji-excellence:before {
+	content: "\f559";
+}
+.tji-phone-2:before {
+	content: "\f095";
+}
+.tji-arrow-down:before {
+	content: "\f078";
+}
+.tji-arrow-left:before {
+	content: "\f053";
+}
+.tji-arrow-right-long:before {
+	content: "\f178";
+}
+.tji-arrow-right:before {
+	content: "\f054";
+}
+.tji-arrow-up-long:before {
+	content: "\f176";
+}
+.tji-arrow-down-long:before {
+	content: "\f175";
+}
+.tji-search:before {
+	content: "\f002";
+}
+.tji-arrow-right-big:before {
+	content: "\f061";
+}
+.tji-arrow-down-big:before {
+	content: "\f063";
+}
+.tji-box:before {
+	content: "\f466";
+}
+.tji-innovative:before {
+	content: "\f2db";
+}
+.tji-award:before {
+	content: "\f559";
+}
+.tji-team:before {
+	content: "\f0c0";
+}
+.tji-support:before {
+	content: "\f590";
+}
+.tji-service-1:before {
+	content: "\f085";
+}
+.tji-service-2:before {
+	content: "\f121";
+}
+.tji-service-3:before {
+	content: "\f233";
+}
+.tji-service-4:before {
+	content: "\f0a1";
+}
+.tji-service-5:before {
+	content: "\f200";
+}
+.tji-service-6:before {
+	content: "\f19d";
+}
+.tji-complete:before {
+	content: "\f058";
+}
+.tji-worldwide:before {
+	content: "\f0ac";
+}
+.tji-growth:before {
+	content: "\f201";
+}
+.tji-at:before {
+	content: "\40";
+}
+.tji-home:before {
+	content: "\f015";
+}
+.tji-user:before {
+	content: "\f007";
+}
+.tji-budget:before {
+	content: "\f155";
+}
+.tji-location-2:before {
+	content: "\f3c5";
+}
+.tji-chart:before {
+	content: "\f201";
+}
+.tji-calendar:before {
+	content: "\f073";
+}
+.tji-comment:before {
+	content: "\f075";
+}
+.tji-chat:before {
+	content: "\f086";
+}
+.tji-clock:before {
+	content: "\f017";
+}
+.tji-plus:before {
+	content: "\f067";
+}
+.tji-minus:before {
+	content: "\f068";
+}
+.tji-phone:before {
+	content: "\f095";
+}
+.tji-envelop:before {
+	content: "\f0e0";
+}
+.tji-plane:before {
+	content: "\f1d8";
+}
+.tji-location-3:before {
+	content: "\f3c5";
+}
+.tji-check:before {
+	content: "\f00c";
+}
+.tji-play:before {
+	content: "\f04b";
+}
+.tji-window:before {
+	content: "\f2d0";
+}
+
+/* Fix fa-thin fa-times close button in mobile menu */
+.fa-thin.fa-times {
+	font-family: "Font Awesome 6 Free" !important;
+	font-weight: 900 !important;
+}
+.fa-thin.fa-times:before {
+	content: "\f00d" !important; /* fa-times / fa-xmark */
+}
+
+
+/* ==========================================
+   VISIBILITY AND CONTRAST ENHANCEMENTS
+   ========================================== */
+
+/* 1. Global Input & Textarea Typed Text Legibility */
+/* For light forms (white background) */
+.contact-form .form-input input[type=text],
+.contact-form .form-input input[type=email],
+.contact-form .form-input input[type=tel],
+.contact-form .form-input textarea {
+  color: #111827 !important; /* High contrast dark grey/black */
+}
+.contact-form .form-input input::placeholder,
+.contact-form .form-input textarea::placeholder {
+  color: #6b7280 !important; /* Legible placeholder */
+}
+
+/* For dark forms (style-2, style-3, consultation forms, etc.) */
+.contact-form.style-2 .form-input input[type=text],
+.contact-form.style-2 .form-input input[type=email],
+.contact-form.style-2 .form-input input[type=tel],
+.contact-form.style-2 .form-input textarea,
+.contact-form.style-3 .form-input input[type=text],
+.contact-form.style-3 .form-input input[type=email],
+.contact-form.style-3 .form-input input[type=tel],
+.contact-form.style-3 .form-input textarea,
+.tj-contact-form-area input[type=text],
+.tj-contact-form-area input[type=email],
+.tj-contact-form-area input[type=tel],
+.tj-contact-form-area textarea {
+  color: #ffffff !important; /* High contrast white text */
+}
+.contact-form.style-2 .form-input input::placeholder,
+.contact-form.style-2 .form-input textarea::placeholder,
+.contact-form.style-3 .form-input input::placeholder,
+.contact-form.style-3 .form-input textarea::placeholder,
+.tj-contact-form-area input::placeholder,
+.tj-contact-form-area textarea::placeholder {
+  color: #a9b8b8 !important; /* Light placeholder */
+}
+
+/* 2. Footer Newsletter Form Visibility */
+.subscribe-form input[type=email] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important; /* White typed text */
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+.subscribe-form input[type=email]::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important; /* Legible placeholder */
+}
+.subscribe-form label {
+  color: rgba(255, 255, 255, 0.8) !important; /* High contrast white/grey text */
+}
+.subscribe-form label a {
+  color: #ffffff !important; /* Fully visible link */
+  text-decoration: underline !important;
+}
+.subscribe-form label a:hover {
+  color: var(--tj-color-theme-primary) !important;
+}
+/* Ensure checkbox has proper border on dark background */
+.subscribe-form input[type=checkbox] {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+.subscribe-form input[type=checkbox]:checked {
+  background-color: var(--tj-color-theme-primary) !important;
+  border-color: var(--tj-color-theme-primary) !important;
+}
+
+/* 3. Search Popup Input Visibility */
+.tj_search_wrapper .search_form form .search_input .search-box input[type=text] {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+.tj_search_wrapper .search_form form .search_input .search-box input[type=text]::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+
+/* ==========================================
+   IMAGE LOGO SIZE ENHANCEMENTS
+   ========================================== */
+.client-logo img {
+  max-height: 65px !important;
+}
+
+/* ==========================================
+   HERO TITLE SPAN OVERRIDES (PREVENTS COLLISION)
+   ========================================== */
+.h8-hero-content .h8-hero-title span:first-child {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+}
+.h8-hero-content .h8-hero-title span:nth-child(2) {
+  display: block !important;
+  width: 100% !important;
+  text-align: right !important;
+  -webkit-margin-start: 0 !important;
+          margin-inline-start: 0 !important;
+}
+@media (max-width: 575px) {
+  .h8-hero-content .h8-hero-title span:nth-child(2) {
+    text-align: left !important;
+  }
+}
+
+/* ==========================================
+   TEAM INITIALS AVATAR
+   ========================================== */
+.team-initials-avatar {
+  background: linear-gradient(135deg, var(--tj-color-theme-primary) 0%, #0d1e21 100%);
+  width: 100%;
+  height: 280px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.team-initials-avatar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+.team-initials-avatar span {
+  font-size: 64px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  font-family: var(--tj-ff-heading), sans-serif;
+  transition: transform 0.3s ease;
+}
+.team-item:hover .team-initials-avatar {
+  background: linear-gradient(135deg, #1e8a8a 0%, var(--tj-color-theme-primary) 100%);
+  box-shadow: 0 10px 25px rgba(30, 138, 138, 0.25), inset 0 0 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--tj-color-theme-primary);
+}
+.team-item:hover .team-initials-avatar span {
+  transform: scale(1.1);
+}
+
+/* ==========================================
+   GLOBAL LOGO SIZE OVERRIDES
+   ========================================== */
+.site_logo img,
+.site_logo .logo img,
+.mobile_logo img,
+.hamburger_logo img {
+  height: 70px !important;
+  max-height: 70px !important;
+  width: auto !important;
+}
+
+.footer-widget img[src*="vidhailogobg"] {
+  height: 100px !important;
+  max-height: 100px !important;
+  width: auto !important;
+}
+
+/* ==========================================
+   SERVICE SIDE DRAWER SYSTEM
+   ========================================== */
+.service-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.service-drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.service-drawer {
+  position: fixed;
+  top: 0;
+  right: -550px;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  background-color: #0b1315; /* Match our dark theme */
+  border-left: 2px solid var(--tj-color-theme-primary);
+  z-index: 10000;
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8);
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+  padding: 40px 30px;
+}
+.service-drawer.active {
+  right: 0;
+}
+.drawer-close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.drawer-close-btn:hover {
+  background: var(--tj-color-theme-primary);
+  border-color: var(--tj-color-theme-primary);
+  transform: rotate(90deg);
+}
+.drawer-title {
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: var(--tj-ff-heading), sans-serif;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 15px;
+}
+.drawer-section-title {
+  font-size: 16px;
+  color: var(--tj-color-theme-primary);
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.drawer-desc {
+  font-size: 15px;
+  color: var(--tj-color-text-body-2);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.drawer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+.drawer-tag {
+  background: rgba(19, 178, 178, 0.08);
+  border: 1px solid rgba(19, 178, 178, 0.2);
+  color: var(--tj-color-theme-primary);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.colab-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+.colab-item:hover {
+  border-color: rgba(19, 178, 178, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+.colab-title {
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.colab-desc {
+  font-size: 13px;
+  color: var(--tj-color-text-body-3);
+  line-height: 1.5;
+}
+.drawer-btn {
+  margin-top: 35px;
+  width: 100%;
+}
+.drawer-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.service-item.style-4 {
+  cursor: pointer;
+}
+@media (max-width: 575px) {
+  .service-drawer {
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+}
+
+/* ==========================================
+   CUSTOM SOFTWARE PROJECT SHOWCASE CARDS
+   ========================================== */
+.vidhai-project-card {
+  background-color: #0c1e21;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+.vidhai-project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--tj-color-theme-primary);
+  box-shadow: 0 15px 35px rgba(30, 138, 138, 0.25);
+}
+.project-window-header {
+  background: #081214;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.window-dots {
+  display: flex;
+  gap: 6px;
+}
+.window-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.window-dot.red { background-color: #ff5f56; }
+.window-dot.yellow { background-color: #ffbd2e; }
+.window-dot.green { background-color: #27c93f; }
+.window-address {
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 11px;
+  color: #a9b8b8;
+  padding: 3px 20px;
+  border-radius: 4px;
+  width: 50%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.project-float-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2px;
+}
+.project-float-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.project-mockup-body {
+  height: 200px;
+  background: #081214;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+/* Sub-styles for mockups */
+.mockup-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+.mockup-row {
+  display: flex;
+  gap: 10px;
+}
+.mockup-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 10px;
+  flex: 1;
+}
+.mockup-label {
+  font-size: 9px;
+  color: #67787a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.mockup-value {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.mockup-bar-container {
+  background: rgba(255, 255, 255, 0.08);
+  height: 6px;
+  border-radius: 3px;
+  width: 100%;
+  margin-top: 4px;
+  overflow: hidden;
+}
+.mockup-bar-fill {
+  background: var(--tj-color-theme-primary);
+  height: 100%;
+  border-radius: 3px;
+}
+.mockup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.mockup-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 11px;
+}
+.mockup-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.mockup-status-dot.green { background-color: #27c93f; }
+.mockup-status-dot.yellow { background-color: #ffbd2e; }
+
+.project-details-body {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #0c1e21;
+}
+.project-details-body .category {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--tj-color-theme-primary);
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 6px;
+}
+.project-details-body .title {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.project-details-body .title a {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+.project-details-body .title a:hover {
+  color: var(--tj-color-theme-primary);
+}
+.project-details-body .description {
+  font-size: 14px;
+  color: #a9b8b8;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.project-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 15px;
+}
+.project-card-footer .explore-link {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+.project-card-footer .explore-link:hover {
+  color: var(--tj-color-theme-primary);
+}
+
+/* ==========================================
+   DYNAMIC SUPPORT CHATBOT STYLES
+   ========================================== */
+.chatbot-bubble {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: var(--tj-color-theme-primary);
+  color: #0c1e21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(19, 178, 178, 0.4);
+  z-index: 999;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.chatbot-bubble:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(19, 178, 178, 0.6);
+}
+.chatbot-window {
+  position: fixed;
+  bottom: 170px;
+  right: 30px;
+  width: 380px;
+  height: 500px;
+  max-height: calc(100vh - 200px);
+  background-color: rgba(12, 30, 33, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.chatbot-window.active {
+  display: flex;
+  animation: slideInUp 0.3s ease-out forwards;
+}
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.chatbot-header {
+  background-color: #081214;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.chatbot-header-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.chatbot-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--tj-color-theme-primary), #0a8e8e);
+  color: #0c1e21;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.chatbot-name {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+}
+.chatbot-status {
+  color: #27c93f;
+  font-size: 11px;
+}
+.chatbot-close {
+  background: none;
+  border: none;
+  color: #a9b8b8;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.chatbot-close:hover {
+  color: #ffffff;
+}
+.chatbot-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.chatbot-messages::-webkit-scrollbar {
+  width: 5px;
+}
+.chatbot-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+.chatbot-messages::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+}
+.chatbot-messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+.chat-message {
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 80%;
+  font-size: 13px;
+  line-height: 1.5;
+  animation: bubbleAppear 0.25s ease-out forwards;
+}
+@keyframes bubbleAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.chat-message.bot-message {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+.chat-message.user-message {
+  background-color: var(--tj-color-theme-primary);
+  color: #0c1e21;
+  font-weight: 500;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+.chatbot-options {
+  padding: 12px 15px;
+  background-color: #081214;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.chatbot-option-chip {
+  background-color: rgba(19, 178, 178, 0.08);
+  border: 1px solid rgba(19, 178, 178, 0.2);
+  color: var(--tj-color-theme-primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.chatbot-option-chip:hover {
+  background-color: var(--tj-color-theme-primary);
+  color: #0c1e21;
+  border-color: var(--tj-color-theme-primary);
+}
+
+@media (max-width: 575px) {
+  .chatbot-window {
+    width: 320px;
+    height: 420px;
+    bottom: 90px;
+    right: 15px;
+  }
+  .chatbot-bubble {
+    bottom: 25px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+/* ==========================================
+   CAREERS & TEAM SECTION CONTRAST ENHANCEMENTS
+   ========================================== */
+.tj-careers-section,
+.tj-culture-section {
+  background-color: #081214 !important; /* Clear dark slate background */
+}
+.tj-careers-section .sec-title,
+.tj-culture-section .sec-title,
+.tj-careers-section h3,
+.tj-culture-section h2 {
+  color: #ffffff !important; /* Pop titles in white */
+}
+.tj-careers-section .desc,
+.tj-culture-section .desc,
+.value-card p,
+.benefit-card p {
+  color: #a9b8b8 !important; /* Light silver for body text readability */
+}
+.value-card h4,
+.benefit-card h4,
+.life-culture-box h4,
+.life-culture-box h5 {
+  color: #ffffff !important;
+}
+
+/* GLOBAL FORM INPUT & TEXTAREA CONTRAST OVERRIDES */
+.contact-form .form-input input,
+.contact-form .form-input textarea,
+.tj-contact-form-area input,
+.tj-contact-form-area textarea,
+.contact-info-area input,
+.contact-info-area textarea {
+  color: #ffffff !important; /* Force entered text to be white */
+  background-color: var(--tj-color-bg-1) !important; /* Dark background */
+  border: 1px solid var(--tj-color-border-1) !important;
+}
+.contact-form .form-input input::placeholder,
+.contact-form .form-input textarea::placeholder,
+.tj-contact-form-area input::placeholder,
+.tj-contact-form-area textarea::placeholder {
+  color: #a9b8b8 !important; /* Light placeholder text */
+  opacity: 0.8;
+}
+
+/* FOOTER CONTRAST ENHANCEMENTS */
+.tj-footer-section label[for="agree"],
+.tj-footer-section label {
+  color: #a9b8b8 !important; /* Light text for checkbox */
+}
+.tj-footer-section label a {
+  color: var(--tj-color-theme-primary) !important; /* Teal link */
+}
+.tj-footer-section label a:hover {
+  color: #ffffff !important;
+}
+
+/* CHATBOT INPUT AND SUBMIT CONTAINER */
+.chatbot-input-area {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #081214;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 10px;
+}
+.chatbot-input {
+  flex-grow: 1;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+  padding: 8px 16px !important;
+  font-size: 13px !important;
+  color: #ffffff !important;
+  height: 38px !important;
+  outline: none;
+}
+.chatbot-input::placeholder {
+  color: #67787a !important;
+  opacity: 0.8;
+}
+.chatbot-send-btn {
+  background: var(--tj-color-theme-primary);
+  border: none;
+  color: #0c1e21;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.chatbot-send-btn:hover {
+  background-color: #0a8e8e;
+  transform: scale(1.05);
+}
+
+
+
+
+

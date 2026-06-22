@@ -1,0 +1,1271 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Vidhai AI Solutions tech capabilities, Generative AI implementations, full stack architectures, and talent incubation bootcamps.">
+
+  <!-- Site Title -->
+  <title>Our Services - Vidhai AI Solutions</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/vidhailogobg.png">
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/bexon-icons.css">
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+  <link rel="stylesheet" href="assets/css/venobox.min.css">
+  <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <style>
+    /* Bright White and Greenish Theme Overrides */
+    :root {
+      --tj-color-bg-1: #ffffff;
+      --tj-color-bg-2: #ffffff;
+      --tj-color-theme-primary: #1e8a8a;
+      --tj-color-theme-bg: #f3f8f8;
+      --tj-color-theme-bg-2: #e9f3f3;
+      --tj-color-border-4: rgba(0, 0, 0, 0.08);
+      --primary-teal: #1e8a8a;
+      --mint-accent: #0f6c6c;
+      --tj-color-heading-primary: #0c1e21;
+      --tj-color-text-body: #364e52;
+    }
+    
+    body {
+      background-color: #ffffff !important;
+      color: #364e52 !important;
+    }
+
+    .header-area {
+      background: rgba(255, 255, 255, 0.9) !important;
+      backdrop-filter: blur(10px) !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .header-area .logo img {
+      filter: none !important;
+    }
+
+    .mainmenu ul > li > a {
+      color: #0c1e21 !important;
+    }
+    
+    .mainmenu ul > li.active > a, 
+    .mainmenu ul > li:hover > a {
+      color: var(--tj-color-theme-primary) !important;
+    }
+
+    .tj-primary-btn {
+      background: var(--primary-teal) !important;
+      border: 1px solid var(--primary-teal) !important;
+      color: #fff !important;
+    }
+    
+    .tj-primary-btn:hover {
+      background: transparent !important;
+      color: var(--mint-accent) !important;
+      border-color: var(--mint-accent) !important;
+    }
+
+    .tj-footer-section {
+      background-color: #081214 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+
+    /* Client logos contrast */
+    .client-logo img {
+      filter: grayscale(100%) brightness(0.3) contrast(1.2);
+      transition: all 0.3s ease;
+    }
+
+    .client-logo img:hover {
+      filter: none;
+    }
+
+    /* Capabilities Page Specific Styles */
+    .tj-services-section {
+      background-color: #f7fafc !important;
+    }
+    
+    .service-card-item {
+      background: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+      border-radius: 12px;
+      padding: 45px 30px !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02) !important;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .service-card-item:hover {
+      border-color: var(--primary-teal) !important;
+      transform: translateY(-5px);
+    }
+    
+    .service-card-item h4 {
+      color: #0c1e21 !important;
+      font-weight: 700;
+    }
+    
+    .service-card-item p {
+      color: #556c70 !important;
+    }
+    
+    .service-icon-box {
+      font-size: 45px;
+      color: var(--primary-teal) !important;
+      margin-bottom: 25px;
+      display: inline-block;
+    }
+
+    /* Right Slide Drawer Styles */
+    .service-drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      z-index: 9998;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .service-drawer-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .service-drawer {
+      position: fixed;
+      top: 0;
+      right: -450px;
+      width: 450px;
+      height: 100%;
+      background: #0c1e21;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      padding: 40px;
+      overflow-y: auto;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @media (max-width: 576px) {
+      .service-drawer {
+        width: 100%;
+        right: -100%;
+      }
+    }
+
+    .service-drawer.active {
+      right: 0;
+    }
+
+    .drawer-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 35px;
+      background: none;
+      border: none;
+      color: #a9b8b8;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .drawer-close-btn:hover {
+      color: #ffffff;
+    }
+
+    .drawer-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .drawer-desc {
+      color: #d1e2e2;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .drawer-section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 8px;
+    }
+
+    .drawer-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .drawer-tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #8fe3e3;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    .colab-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .colab-title {
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .colab-desc {
+      color: #a9b8b8;
+      font-size: 13px;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* ── Pricing Section (service1 style) ─────────────────── */
+    .tj-pricing-section-2 {
+      background: #f7fafc;
+      padding: 100px 0;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .tj-pricing-section-2 .sub-title {
+      color: var(--primary-teal) !important;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .tj-pricing-section-2 .sec-title {
+      color: #0c1e21 !important;
+      font-size: 36px;
+      font-weight: 800;
+    }
+
+    .tj-pricing-section-2 .sec-title span {
+      color: var(--primary-teal) !important;
+    }
+
+    .tj-pricing-section-2 .pricing-box {
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 16px;
+      padding: 40px 35px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tj-pricing-section-2 .pricing-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(30,138,138,0.12);
+      border-color: var(--primary-teal);
+    }
+
+    .tj-pricing-section-2 .pricing-box.active {
+      background: linear-gradient(145deg, #1e8a8a 0%, #0f6c6c 100%);
+      border-color: var(--primary-teal);
+      box-shadow: 0 20px 60px rgba(30,138,138,0.28);
+    }
+
+    .tj-pricing-section-2 .pricing-box .package-name {
+      color: #0c1e21;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .tj-pricing-section-2 .pricing-box.active .package-name,
+    .tj-pricing-section-2 .pricing-box.active .package-desc p,
+    .tj-pricing-section-2 .pricing-box.active .package-period,
+    .tj-pricing-section-2 .pricing-box.active .package-currency,
+    .tj-pricing-section-2 .pricing-box.active .price-number {
+      color: #ffffff !important;
+    }
+
+    .tj-pricing-section-2 .pricing-box .package-desc p {
+      color: #556c70;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .tj-pricing-section-2 .pricing-box .package-price {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 22px;
+    }
+
+    .tj-pricing-section-2 .pricing-box .package-currency {
+      color: var(--primary-teal);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1;
+      padding-bottom: 8px;
+    }
+
+    .tj-pricing-section-2 .pricing-box .price-number {
+      color: #0c1e21;
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .tj-pricing-section-2 .pricing-box .package-period {
+      color: #556c70;
+      font-size: 13px;
+      padding-bottom: 8px;
+    }
+
+    .tj-pricing-section-2 .pricing-box .pricing-btn {
+      margin-bottom: 28px;
+    }
+
+    .tj-pricing-section-2 .pricing-box .text-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+      color: var(--primary-teal);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .tj-pricing-section-2 .pricing-box.active .text-btn {
+      color: #fff;
+    }
+
+    .tj-pricing-section-2 .pricing-box .text-btn .btn-icon {
+      background: var(--primary-teal);
+      color: #fff;
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tj-pricing-section-2 .pricing-box.active .text-btn .btn-icon {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+    }
+
+    .tj-pricing-section-2 .pricing-box .list-items ul {
+      list-style: none;
+      padding: 0; margin: 0;
+    }
+
+    .tj-pricing-section-2 .pricing-box .list-items ul li {
+      color: #556c70;
+      font-size: 14px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tj-pricing-section-2 .pricing-box.active .list-items ul li {
+      color: #d1f0f0;
+      border-bottom-color: rgba(255,255,255,0.12);
+    }
+
+    .tj-pricing-section-2 .pricing-box .list-items ul li:last-child { border-bottom: none; }
+
+    .tj-pricing-section-2 .pricing-box .list-items ul li i {
+      color: var(--primary-teal);
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+
+    .tj-pricing-section-2 .pricing-box.active .list-items ul li i {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .svc-pricing-badge {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: rgba(255,255,255,0.18);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="body-overlay"></div>
+
+  <!-- Preloader Start -->
+  <div class="tj-preloader is-loading">
+    <div class="tj-preloader-inner">
+      <div class="tj-preloader-ball-wrap">
+        <div class="tj-preloader-ball-inner-wrap">
+          <div class="tj-preloader-ball-inner">
+            <div class="tj-preloader-ball"></div>
+          </div>
+          <div class="tj-preloader-ball-shadow"></div>
+        </div>
+        <div id="tj-weave-anim" class="tj-preloader-text">Vidhai AI Solutions</div>
+      </div>
+    </div>
+    <div class="tj-preloader-overlay"></div>
+  </div>
+  <!-- Preloader end -->
+
+  <!-- back to top start -->
+  <div id="tj-back-to-top"><span id="tj-back-to-top-percentage"></span></div>
+  <!-- back to top end -->
+
+  <!-- start: Offcanvas Menu -->
+  <div class="tj-offcanvas-area d-none d-lg-block">
+    <div class="hamburger_bg"></div>
+    <div class="hamburger_wrapper">
+      <div class="hamburger_inner">
+        <div class="hamburger_top d-flex align-items-center justify-content-between">
+          <div class="hamburger_logo">
+            <a href="index.html" class="mobile_logo">
+              <img src="assets/images/logo/vidhailogobg.png" alt="Logo" style="height: 55px; width: auto; object-fit: contain;">
+            </a>
+          </div>
+          <div class="hamburger_close">
+            <button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button>
+          </div>
+        </div>
+        <div class="offcanvas-text">
+          <p>Vidhai AI Solutions delivers cutting-edge Generative AI, custom software architectures, and talent incubation programs for enterprise transformation.</p>
+        </div>
+        <div class="hamburger-infos">
+          <h5 class="hamburger-title">Contact Info</h5>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="subtitle">Phone</span>
+              <a class="contact-link" href="tel:9345504199">+91 9345504199</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Email</span>
+              <a class="contact-link" href="mailto:aividhai26@gmail.com">aividhai26@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Location</span>
+              <span class="contact-link">no7, muthu nagar, sidco road, tiruppur 641606</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end: Offcanvas Menu -->
+
+  <!-- start: Hamburger Menu -->
+  <div class="hamburger-area d-lg-none">
+    <div class="hamburger_bg"></div>
+    <div class="hamburger_wrapper">
+      <div class="hamburger_inner">
+        <div class="hamburger_top d-flex align-items-center justify-content-between">
+          <div class="hamburger_logo">
+            <a href="index.html" class="mobile_logo">
+              <img src="assets/images/logo/vidhailogobg.png" alt="Logo" style="height: 55px; width: auto; object-fit: contain;">
+            </a>
+          </div>
+          <div class="hamburger_close">
+            <button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button>
+          </div>
+        </div>
+        <div class="hamburger_menu">
+          <div class="mobile_menu"></div>
+        </div>
+        <div class="hamburger-infos">
+          <h5 class="hamburger-title">Contact Info</h5>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="subtitle">Phone</span>
+              <a class="contact-link" href="tel:9345504199">+91 9345504199</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Email</span>
+              <a class="contact-link" href="mailto:aividhai26@gmail.com">aividhai26@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Location</span>
+              <span class="contact-link">no7, muthu nagar, sidco road, tiruppur 641606</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end: Hamburger Menu -->
+
+  <!-- start: Header Area -->
+  <header class="header-area header-2 header-absolute section-gap-x">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="header-wrapper">
+            <!-- site logo -->
+            <div class="site_logo">
+              <a class="logo" href="index.html">
+                <img src="assets/images/logo/vidhailogobg.png" alt="Vidhai AI Logo" style="height: 50px; width: auto; object-fit: contain;">
+              </a>
+            </div>
+
+            <!-- navigation -->
+            <div class="menu-area d-none d-lg-inline-flex align-items-center">
+              <nav id="mobile-menu" class="mainmenu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li class="active"><a href="service.html">Services</a></li>
+                  <li><a href="vidhai-services.html">Vidhai Services</a></li>
+                  <li><a href="team.html">Team</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="careers.html">Careers</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- header right info -->
+            <div class="header-right-item d-none d-lg-inline-flex">
+              <div class="header-button">
+                <a class="tj-primary-btn" href="contact.html">
+                  <span class="btn-text"><span>Let's Talk</span></span>
+                  <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                </a>
+              </div>
+              <div class="menu_bar menu_offcanvas d-none d-lg-inline-flex">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <!-- menu bar -->
+            <div class="menu_bar mobile_menu_bar d-lg-none">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end: Header Area -->
+
+  <!-- start: Sticky Header Area -->
+  <header class="header-area header-2 header-duplicate header-sticky section-gap-x">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="header-wrapper">
+            <!-- site logo -->
+            <div class="site_logo">
+              <a class="logo" href="index.html">
+                <img src="assets/images/logo/vidhailogobg.png" alt="Vidhai AI Logo" style="height: 50px; width: auto; object-fit: contain;">
+              </a>
+            </div>
+
+            <!-- navigation -->
+            <div class="menu-area d-none d-lg-inline-flex align-items-center">
+              <nav class="mainmenu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li class="active"><a href="service.html">Services</a></li>
+                  <li><a href="vidhai-services.html">Vidhai Services</a></li>
+                  <li><a href="team.html">Team</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="careers.html">Careers</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- header right info -->
+            <div class="header-right-item d-none d-lg-inline-flex">
+              <div class="header-button">
+                <a class="tj-primary-btn" href="contact.html">
+                  <span class="btn-text"><span>Let's Talk</span></span>
+                  <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                </a>
+              </div>
+            </div>
+
+            <!-- menu bar -->
+            <div class="menu_bar mobile_menu_bar d-lg-none">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end: Sticky Header Area -->
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main id="primary" class="site-main">
+        <div class="top-space-15"></div>
+
+        <!-- start: Breadcrumb Section -->
+        <section class="tj-page-header section-gap-x" data-bg-image="assets/images/bg/pheader-bg.webp" style="background-size: cover; background-position: center; position: relative;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="tj-page-header-content text-center" style="position: relative; z-index: 5;">
+                  <h1 class="tj-page-title" style="color: #ffffff; font-size: 48px; font-weight: 800; margin-bottom: 15px;">Our Tech Capabilities</h1>
+                  <div class="tj-page-link" style="color: #a9b8b8; font-size: 16px;">
+                    <span><a href="index.html" style="color: var(--primary-teal); text-decoration: none;"><i class="tji-home" style="margin-right: 5px;"></i>Home</a></span>
+                    <span style="margin: 0 10px;"><i class="fa-solid fa-chevron-right"></i></span>
+                    <span>Services</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-header-overlay" data-bg-image="assets/images/shape/pheader-overlay.webp" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.85; z-index: 1;"></div>
+        </section>
+        <!-- end: Breadcrumb Section -->
+
+        <!-- start: Services Grid Section -->
+        <section class="tj-services-section section-gap">
+          <div class="container">
+            <div class="row text-center mb-5">
+              <div class="col-lg-8 offset-lg-2">
+                <span class="sub-title" style="color: var(--primary-teal); font-weight: 600; text-transform: uppercase;">Capabilities</span>
+                <h2 style="color: #0c1e21; font-size: 36px; font-weight: 800; margin-top: 10px;">Select a capabilities card to view technical integrations & custom case reports.</h2>
+              </div>
+            </div>
+            <div class="row g-4">
+              <!-- Card 1 -->
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="service-card-item wow fadeInUp" data-wow-delay=".1s" data-service-id="generative-ai">
+                  <div class="service-icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                  <h4>Generative AI Solutions</h4>
+                  <p>Fine-tuning Large Language Models (LLMs) on private datasets and constructing secure Retrieval-Augmented Generation (RAG) loops.</p>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="service-card-item wow fadeInUp" data-wow-delay=".2s" data-service-id="web-fullstack">
+                  <div class="service-icon-box"><i class="fa-solid fa-code"></i></div>
+                  <h4>Web Dev & Full Stack</h4>
+                  <p>Engineering premium full stack applications (MERN, React/Next) optimized for responsive layout speeds and clean data schema indexes.</p>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="service-card-item wow fadeInUp" data-wow-delay=".3s" data-service-id="custom-software">
+                  <div class="service-icon-box"><i class="fa-solid fa-layer-group"></i></div>
+                  <h4>Custom Software & ERP</h4>
+                  <p>Tailored administrative ERP hubs, school registers, and construction material expense trackers built for role-based workflows.</p>
+                </div>
+              </div>
+              <!-- Card 4 -->
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="service-card-item wow fadeInUp" data-wow-delay=".4s" data-service-id="chatbot-dev">
+                  <div class="service-icon-box"><i class="fa-solid fa-comments"></i></div>
+                  <h4>AI Chatbot Development</h4>
+                  <p>Deploying responsive dialogue trees, intent classification engines, and custom chat bubbles onto business websites.</p>
+                </div>
+              </div>
+              <!-- Card 5 -->
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="service-card-item wow fadeInUp" data-wow-delay=".5s" data-service-id="digital-marketing">
+                  <div class="service-icon-box"><i class="fa-solid fa-bullhorn"></i></div>
+                  <h4>Digital Marketing & SEO</h4>
+                  <p>Increasing organic visibility through schema audits, page performance diagnostics, Google analytics configurations, and Meta pixels.</p>
+                </div>
+              </div>
+              <!-- Card 6 -->
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="service-card-item wow fadeInUp" data-wow-delay=".6s" data-service-id="ml-analytics">
+                  <div class="service-icon-box"><i class="fa-solid fa-brain"></i></div>
+                  <h4>ML & Data Analytics</h4>
+                  <p>Designing Computer Vision prototype controls, regression charts, and visual dashboards for business performance metrics.</p>
+                </div>
+              </div>
+              <!-- Card 7 -->
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="service-card-item wow fadeInUp" data-wow-delay=".7s" data-service-id="automations-pipelines">
+                  <div class="service-icon-box"><i class="fa-solid fa-gears"></i></div>
+                  <h4>Automations & Pipelines</h4>
+                  <p>Connecting web services via custom webhook listeners, scheduled data synchronizations, and system automation pipelines.</p>
+                </div>
+              </div>
+              <!-- Card 8 -->
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="service-card-item wow fadeInUp" data-wow-delay=".8s" data-service-id="talent-incubation">
+                  <div class="service-icon-box"><i class="fa-solid fa-user-graduate"></i></div>
+                  <h4>Talent Incubation</h4>
+                  <p>Training local graduates via project bootcamps, resume preparations, and active developer placement programs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Services Grid Section -->
+
+        <!-- start: Contact Section (service1.html map.svg style) -->
+        <section class="tj-contact-section section-gap section-gap-x">
+          <div class="container">
+            <div class="row">
+              <!-- LEFT: Animated SVG World Map -->
+              <div class="col-lg-6">
+                <div class="global-map wow fadeInUp" data-wow-delay=".3s">
+                  <div class="global-map-img">
+                    <img src="assets/images/bg/map.svg" alt="World Map">
+                    <!-- Location Dot 1: Head Office – Tiruppur, India -->
+                    <div class="location-indicator loc-1">
+                      <div class="location-tooltip">
+                        <span>Head Office:</span>
+                        <p>no7, muthu nagar, sidco road,<br>Tiruppur 641606, Tamil Nadu.</p>
+                        <a href="tel:9345504199">P: +91 9345504199</a>
+                        <a href="mailto:aividhai26@gmail.com">M: aividhai26@gmail.com</a>
+                      </div>
+                    </div>
+                    <!-- Location Dot 2: Regional – Chennai -->
+                    <div class="location-indicator loc-2">
+                      <div class="location-tooltip">
+                        <span>Regional Office:</span>
+                        <p>Chennai, Tamil Nadu, India.</p>
+                        <a href="tel:9345504199">P: +91 9345504199</a>
+                        <a href="mailto:aividhai26@gmail.com">M: aividhai26@gmail.com</a>
+                      </div>
+                    </div>
+                    <!-- Location Dot 3: Partner – Coimbatore -->
+                    <div class="location-indicator loc-3">
+                      <div class="location-tooltip">
+                        <span>Partner Hub:</span>
+                        <p>Coimbatore, Tamil Nadu, India.</p>
+                        <a href="tel:9345504199">P: +91 9345504199</a>
+                        <a href="mailto:aividhai26@gmail.com">M: aividhai26@gmail.com</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- RIGHT: Contact Form -->
+              <div class="col-lg-6">
+                <div class="contact-form style-2 wow fadeInUp" data-wow-delay=".4s">
+                  <div class="sec-heading">
+                    <span class="sub-title text-white"><i class="tji-box"></i>Get in Touch</span>
+                    <h2 class="sec-title title-anim">Drop Us a <span>Line.</span></h2>
+                  </div>
+                  <form id="svc-contact-form">
+                    <input type="hidden" name="time">
+                    <div class="row wow fadeInUp" data-wow-delay=".5s">
+                      <div class="col-sm-6">
+                        <div class="form-input">
+                          <input type="text" name="name" placeholder="Full Name *" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-input">
+                          <input type="email" name="email" placeholder="Email Address *" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-input">
+                          <input type="tel" name="phone" placeholder="Phone number *" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-input">
+                          <div class="tj-nice-select-box">
+                            <div class="tj-select">
+                              <select name="subject">
+                                <option value="">Choose a service</option>
+                                <option value="Generative AI Solutions">Generative AI Solutions</option>
+                                <option value="Web Dev &amp; Full Stack">Web Dev &amp; Full Stack</option>
+                                <option value="Custom Software &amp; ERP">Custom Software &amp; ERP</option>
+                                <option value="AI Chatbot Development">AI Chatbot Development</option>
+                                <option value="Digital Marketing &amp; SEO">Digital Marketing &amp; SEO</option>
+                                <option value="ML &amp; Data Analytics">ML &amp; Data Analytics</option>
+                                <option value="Automations &amp; Pipelines">Automations &amp; Pipelines</option>
+                                <option value="Talent Incubation">Talent Incubation</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="form-input message-input">
+                          <textarea name="message" placeholder="Type message *" required></textarea>
+                        </div>
+                      </div>
+                      <div class="submit-btn">
+                        <button class="tj-primary-btn" type="submit">
+                          <span class="btn-text"><span>Send Message</span></span>
+                          <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-shape-1">
+            <img src="assets/images/shape/pattern-2.svg" alt="">
+          </div>
+          <div class="bg-shape-2">
+            <img src="assets/images/shape/pattern-3.svg" alt="">
+          </div>
+        </section>
+        <!-- end: Contact Section -->
+
+
+        <!-- ═══════════════════════════════════════════════════
+             PRICING SECTION  (service1.html layout, Vidhai content)
+        ═══════════════════════════════════════════════════ -->
+        <section class="tj-pricing-section-2">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="sec-heading text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
+                  <span class="sub-title"><i class="tji-box"></i>&nbsp;Pricing Plan</span>
+                  <h2 class="sec-title mt-3">Our Transparent <span>Packages.</span></h2>
+                  <p style="color: #556c70; max-width: 600px; margin: 15px auto 0; font-size: 15px; line-height: 1.7;">From your first website to a fully enterprise-grade AI platform — choose the right tier for your growth stage.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row row-gap-4 justify-content-center">
+
+              <!-- Card 1: Web Development -->
+              <div class="col-xl-4 col-md-6">
+                <div class="pricing-box wow fadeInUp" data-wow-delay=".4s">
+                  <div class="pricing-header">
+                    <h4 class="package-name">Web Development</h4>
+                    <div class="package-desc"><p>Business Websites &amp; Web Apps</p></div>
+                    <div class="package-price">
+                      <span class="package-currency">&#8377;</span>
+                      <span class="price-number">15K</span>
+                      <span class="package-period">&nbsp;starting price</span>
+                    </div>
+                    <div class="pricing-btn">
+                      <a class="text-btn" href="contact.html">
+                        <span class="btn-text"><span>Get Started</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="list-items">
+                    <ul>
+                      <li><i class="tji-list"></i>Responsive Business Website</li>
+                      <li><i class="tji-list"></i>Landing Pages &amp; Portfolios</li>
+                      <li><i class="tji-list"></i>E-Commerce Integration</li>
+                      <li><i class="tji-list"></i>SEO-Ready Structure</li>
+                      <li><i class="tji-list"></i>WhatsApp &amp; Contact Forms</li>
+                      <li><i class="tji-list"></i>3-Month Support</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Dynamic Softwares (Active / Featured) -->
+              <div class="col-xl-4 col-md-6">
+                <div class="pricing-box active wow fadeInUp" data-wow-delay=".6s">
+                  <span class="svc-pricing-badge">Most Popular</span>
+                  <div class="pricing-header">
+                    <h4 class="package-name">Dynamic Softwares</h4>
+                    <div class="package-desc"><p>ERP, CRM &amp; Custom Portals</p></div>
+                    <div class="package-price">
+                      <span class="price-number" style="font-size: 38px; padding-bottom: 4px;">Custom</span>
+                    </div>
+                    <div class="pricing-btn">
+                      <a class="text-btn" href="contact.html">
+                        <span class="btn-text"><span>Request Pricing</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="list-items">
+                    <ul>
+                      <li><i class="tji-list"></i>School / College ERP Systems</li>
+                      <li><i class="tji-list"></i>CRM &amp; Sales Tracking Portals</li>
+                      <li><i class="tji-list"></i>Inventory &amp; Billing Software</li>
+                      <li><i class="tji-list"></i>Role-Based Access &amp; Dashboards</li>
+                      <li><i class="tji-list"></i>AI Chatbot Integration</li>
+                      <li><i class="tji-list"></i>Priority Support &amp; Updates</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: Custom Software -->
+              <div class="col-xl-4 col-md-6">
+                <div class="pricing-box wow fadeInUp" data-wow-delay=".8s">
+                  <div class="pricing-header">
+                    <h4 class="package-name">Custom Software</h4>
+                    <div class="package-desc"><p>Enterprise-Grade Bespoke Solutions</p></div>
+                    <div class="package-price">
+                      <span class="price-number" style="font-size: 28px; line-height: 1.2; padding-bottom: 8px; color: var(--primary-teal);">Get a Quote</span>
+                    </div>
+                    <div class="pricing-btn">
+                      <a class="text-btn" href="contact.html">
+                        <span class="btn-text"><span>Describe Your Problem</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="list-items">
+                    <ul>
+                      <li><i class="tji-list"></i>Fully Tailored to Your Workflow</li>
+                      <li><i class="tji-list"></i>AI &amp; ML Model Integration</li>
+                      <li><i class="tji-list"></i>Automation Pipelines &amp; APIs</li>
+                      <li><i class="tji-list"></i>Multi-Platform Deployment</li>
+                      <li><i class="tji-list"></i>Dedicated Development Team</li>
+                      <li><i class="tji-list"></i>Ongoing Maintenance &amp; SLA</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- Bottom CTA -->
+            <div class="row">
+              <div class="col-12 text-center mt-5 wow fadeInUp" data-wow-delay=".9s">
+                <p style="color: #556c70; font-size: 15px;">Not sure which fits? <a href="contact.html" style="color: var(--primary-teal); font-weight: 700; text-decoration: none;">Talk to our team &rarr;</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Pricing Section -->
+
+      </main>
+
+
+      <!-- start: Footer Section -->
+      <footer class="tj-footer-section footer-1 section-gap-x" style="padding: 80px 0 30px; background: #081214; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <img src="assets/images/logo/vidhailogobg.png" alt="Logo" style="height: 60px; width: auto; object-fit: contain; margin-bottom: 25px;">
+                <p style="color: #a9b8b8; line-height: 1.6;">Empowering local enterprises with high-performance digital tools, machine learning insights, and enterprise automation.</p>
+                <div class="social-links d-flex gap-3 mt-4">
+                  <a href="https://www.instagram.com/vidhai_ai_solutions?igsh=MnN3NDM2MzkxOXdy" target="_blank" style="background: rgba(255,255,255,0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/company/vidhai-ai-solutions" target="_blank" style="background: rgba(255,255,255,0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4 style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 25px;">Quick Links</h4>
+                <div class="row">
+                  <div class="col-6">
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                      <li style="margin-bottom: 12px;"><a href="index.html" style="color: #a9b8b8; text-decoration: none;">Home</a></li>
+                      <li style="margin-bottom: 12px;"><a href="about.html" style="color: #a9b8b8; text-decoration: none;">About</a></li>
+                      <li style="margin-bottom: 12px;"><a href="service.html" style="color: #a9b8b8; text-decoration: none;">Services</a></li>
+                      <li style="margin-bottom: 12px;"><a href="contact.html" style="color: #a9b8b8; text-decoration: none;">Contact</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                      <li style="margin-bottom: 12px;"><a href="vidhai-services.html" style="color: #a9b8b8; text-decoration: none;">Custom Service</a></li>
+                      <li style="margin-bottom: 12px;"><a href="faq.html" style="color: #a9b8b8; text-decoration: none;">FAQ</a></li>
+                      <li style="margin-bottom: 12px;"><a href="careers.html" style="color: #a9b8b8; text-decoration: none;">Programs</a></li>
+                      <li style="margin-bottom: 12px;"><a href="service.html" style="color: #a9b8b8; text-decoration: none;">Software Services</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4 style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 25px;">Our Branches</h4>
+                <p style="color: #a9b8b8; margin-bottom: 10px; font-size: 13px; line-height: 1.4;"><i class="fa-solid fa-map-pin" style="color: var(--primary-teal); margin-right: 10px;"></i> <strong>Tiruppur (HO):</strong> no7, muthu nagar, sidco road, tiruppur 641606</p>
+                <p style="color: #a9b8b8; margin-bottom: 15px; font-size: 13px; line-height: 1.4;"><i class="fa-solid fa-map-pin" style="color: var(--primary-teal); margin-right: 10px;"></i> <strong>Hosur Branch:</strong> 2/339, 2nd St, Kamaraj Nagar, Leyland, Hosur 635126</p>
+                <p style="color: #a9b8b8; margin-bottom: 10px;"><i class="fa-solid fa-phone" style="color: var(--primary-teal); margin-right: 10px;"></i> +91 9345504199</p>
+                <p style="color: #a9b8b8; margin-bottom: 15px;"><i class="fa-solid fa-envelope" style="color: var(--primary-teal); margin-right: 10px;"></i> aividhai26@gmail.com</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4 style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 25px;">Newsletter</h4>
+                <p style="color: #a9b8b8; margin-bottom: 20px;">Subscribe to our newsletter for latest updates.</p>
+                <form action="#" class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                  <div class="form-group" style="position: relative; margin-bottom: 15px;">
+                    <input type="email" placeholder="Your Email" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; padding: 12px 15px; width: 100%; border-radius: 6px; font-size: 14px;" required>
+                    <button type="submit" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: var(--primary-teal); border: none; color: #fff; width: 35px; height: 35px; border-radius: 4px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;"><i class="fa-solid fa-paper-plane"></i></button>
+                  </div>
+                  <div class="form-check d-flex align-items-start gap-2" style="margin: 0; padding: 0;">
+                    <input type="checkbox" id="newsletter-agree" style="margin-top: 4px; cursor: pointer;" required>
+                    <label for="newsletter-agree" style="color: #a9b8b8; font-size: 12px; line-height: 1.4; cursor: pointer; user-select: none;">I agree to the <a href="faq.html" style="color: var(--primary-teal); text-decoration: none;">Terms & Conditions</a></label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <hr style="border-top: 1px solid rgba(255,255,255,0.08); margin: 50px 0 25px;">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-md-start text-center">
+              <p style="color: #67787a; margin: 0;">&copy; 2026 <a href="index.html" style="color: var(--mint-accent); text-decoration: none;">Vidhai AI Solutions</a>. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end: Footer Section -->
+    </div>
+  </div>
+
+  <!-- Service Slide Drawer HTML -->
+  <div class="service-drawer-overlay" id="drawerOverlay"></div>
+  <div class="service-drawer" id="serviceDrawer">
+    <button class="drawer-close-btn" id="drawerCloseBtn">&times;</button>
+    <div class="drawer-body" id="drawerBody">
+      <!-- Content populated dynamically -->
+    </div>
+  </div>
+
+  <!-- JS here -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollSmoother.js"></script>
+  <script src="assets/js/gsap-scroll-to-plugin.min.js"></script>
+  <script src="assets/js/gsap-scroll-trigger.min.js"></script>
+  <script src="assets/js/gsap-split-text.min.js"></script>
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <script src="assets/js/swiper.min.js"></script>
+  <script src="assets/js/odometer.min.js"></script>
+  <script src="assets/js/venobox.min.js"></script>
+  <script src="assets/js/appear.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/meanmenu.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Service Details Data
+    const serviceDetails = {
+      'generative-ai': {
+        title: 'Generative AI Solutions',
+        desc: 'We design and deploy custom Generative AI ecosystems that automate cognitive tasks and knowledge work. Our services include fine-tuning large language models (LLMs) on private enterprise datasets, configuring secure retrieval-augmented generation (RAG) frameworks to query internal documents safely, and building autonomous multi-agent systems.',
+        supports: ['OpenAI APIs', 'Llama-3 & Open Source LLMs', 'LangChain', 'Flowise', 'Vector Databases (Pinecone, Chroma)', 'Python & HuggingFace'],
+        collaborations: [
+          {
+            title: 'Solvenix Techwork',
+            desc: 'Implemented custom NLP pipeline support for prototype validation models.'
+          },
+          {
+            title: 'Academic Partnerships',
+            desc: 'Delivered Master AI sessions and structured AI/ML training materials for 500+ professionals.'
+          }
+        ]
+      },
+      'web-fullstack': {
+        title: 'Web Dev & Full Stack (MERN)',
+        desc: 'Our full-stack team builds highly responsive, premium web applications engineered for speed, search optimization, and enterprise-grade security. We utilize modern development practices and scalable architectures, with clean state management and database indexing.',
+        supports: ['React.js & Next.js', 'Node.js & Express', 'MongoDB & PostgreSQL', 'Tailwind CSS & Vanilla CSS', 'RESTful & GraphQL APIs', 'GitHub & CI/CD Pipelines'],
+        collaborations: [
+          {
+            title: 'SPM Agencies',
+            desc: 'Developed and optimized an e-commerce sales dashboard portal for Poomex official products.'
+          },
+          {
+            title: 'Dreams Infinite Photography',
+            desc: 'Designed and deployed a highly responsive portfolio website with custom media assets galleries.'
+          }
+        ]
+      },
+      'custom-software': {
+        title: 'Custom Software & ERP',
+        desc: 'We create end-to-end management systems tailored to industry requirements, including Construction CRM, school registries, and HMS/HRM suites that automate workflows and tracking.',
+        supports: ['Custom ERP Dashboards', 'HMS & HRM Suites', 'Database Registry Modules', 'SMS & WhatsApp API Alerts', 'Role-Based Authentication Access'],
+        collaborations: [
+          {
+            title: 'Kongu Matriculation School',
+            desc: 'Automated administrative fee receipts and school databases, saving 85% of office paperwork.'
+          },
+          {
+            title: 'Thendral City Developers',
+            desc: 'Configured a CRM with auto-alerts for supervisor site expenses and material purchase requests.'
+          }
+        ]
+      },
+      'chatbot-dev': {
+        title: 'AI Chatbot Development',
+        desc: 'We configure and integrate conversational AI systems that respond to client queries, resolve service inquiries using structured FAQ datasets, and provide location information.',
+        supports: ['Rule-Based Dialogue Routers', 'FAQ Intent Classifier', 'Direct API Coordinates Bindings', 'HTML5 Embed Snippets', 'Chat History Logs'],
+        collaborations: [
+          {
+            title: 'Local Businesses Integration',
+            desc: 'Enabled a customized chat bubble trigger across multiple business static websites.'
+          }
+        ]
+      },
+      'digital-marketing': {
+        title: 'Digital Marketing & SEO',
+        desc: 'We build data-driven marketing frameworks that track user conversions, manage SEO health check registers, and sync campaigns with custom dashboards.',
+        supports: ['Technical SEO Audits', 'Google Analytics (GA4)', 'Meta Ads Pixel Tracking', 'SMO Optimization Strategies', 'Automated Campaign Metrics Reports'],
+        collaborations: [
+          {
+            title: 'Dreams Infinite Photography',
+            desc: 'Optimized local search engine rank, leading to a 40% increase in wedding package leads.'
+          }
+        ]
+      },
+      'ml-analytics': {
+        title: 'Machine Learning & Analytics',
+        desc: 'We implement predictive analysis and Computer Vision prototype integrations, helping companies visualize core parameters.',
+        supports: ['Computer Vision (OpenCV)', 'Predictive Regression Models', 'Power BI Dashboards Integration', 'NumPy & Pandas Analytics', 'TensorFlow & Scikit-Learn'],
+        collaborations: [
+          {
+            title: 'Solvenix Techwork',
+            desc: 'Designed predictive ML metrics dashboards for prototype hardware validation testing.'
+          }
+        ]
+      },
+      'automations-pipelines': {
+        title: 'Automations & Pipelines',
+        desc: 'We build automated workflows that synchronize enterprise tools, connect external services via webhooks, and execute background tasks seamlessly.',
+        supports: ['Zapier & Make integrations', 'Scheduled Cron Python Scripts', 'Webhook API Receivers', 'Google Sheets automation', 'Node.js event handlers'],
+        collaborations: [
+          {
+            title: 'Solvenix Sync',
+            desc: 'Automated remote database backup synchronizations, saving hours of manual dumps.'
+          }
+        ]
+      },
+      'talent-incubation': {
+        title: 'Talent Incubation',
+        desc: 'We manage full developer incubation cycles, hosting code bootcamps, structuring industry internships, and preparing CV parameters for developer positions.',
+        supports: ['Full Stack Bootcamps', 'MOU Academic Workshops', 'Mock CV & Interview Audits', 'LinkedIn profile tuning', 'Direct corporate placement references'],
+        collaborations: [
+          {
+            title: 'Kangeyam Institute',
+            desc: 'Provided verified internships and certification courses for over 500 graduates.'
+          }
+        ]
+      }
+    };
+
+    $(document).ready(function() {
+      // Swiper logo marquee settings
+      var clientSwiper = new Swiper('.client-slider-1', {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          576: { slidesPerView: 3 },
+          768: { slidesPerView: 4 },
+          1024: { slidesPerView: 5 }
+        }
+      });
+
+      // Drawer slide-out logic
+      $('.service-card-item').on('click', function() {
+        const serviceId = $(this).data('service-id');
+        const data = serviceDetails[serviceId];
+        if (!data) return;
+
+        let tagsHtml = '';
+        data.supports.forEach(tag => {
+          tagsHtml += `<span class="drawer-tag">${tag}</span>`;
+        });
+
+        let colabsHtml = '';
+        data.collaborations.forEach(colab => {
+          colabsHtml += `
+            <div class="colab-item">
+              <h5 class="colab-title">${colab.title}</h5>
+              <p class="colab-desc">${colab.desc}</p>
+            </div>
+          `;
+        });
+
+        const drawerContent = `
+          <h2 class="drawer-title">${data.title}</h2>
+          <p class="drawer-desc">${data.desc}</p>
+          <h4 class="drawer-section-title">Supported Tech Stack</h4>
+          <div class="drawer-tags">${tagsHtml}</div>
+          <h4 class="drawer-section-title">Client Case Collaborations</h4>
+          <div class="drawer-colabs">${colabsHtml}</div>
+        `;
+
+        $('#drawerBody').html(drawerContent);
+        $('#drawerOverlay').addClass('active');
+        $('#serviceDrawer').addClass('active');
+      });
+
+      // Close drawer function
+      function closeDrawer() {
+        $('#drawerOverlay').removeClass('active');
+        $('#serviceDrawer').removeClass('active');
+      }
+
+      $('#drawerCloseBtn').on('click', closeDrawer);
+      $('#drawerOverlay').on('click', closeDrawer);
+    });
+  </script>
+  <!-- Contact modals -->
+  <div class="modal" id="message_sent" tabindex="-1">
+    <div class="modal-dialog"><div class="modal-content">
+      <div class="modal-header alert alert-success" role="alert"><h5 class="modal-title">Message Sent Successfully</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body"><p>Thank you for contacting Vidhai AI Solutions. We will get back to you within 2 hours.<br>Have a great day!</p></div>
+      <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+    </div></div>
+  </div>
+  <div class="modal" id="message_fail" tabindex="-1">
+    <div class="modal-dialog"><div class="modal-content">
+      <div class="modal-header alert alert-danger" role="alert"><h5 class="modal-title">Error</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body"><p>Oops! Something went wrong, please try again.</p></div>
+      <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+    </div></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,804 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vidhai AI Solutions Blog — insights on Generative AI, custom software, ERP/CRM, and digital growth in Tamil Nadu.">
+
+  <!-- Site Title -->
+  <title>Blog - Vidhai AI Solutions</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/vidhailogobg.png">
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome-pro.min.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/bexon-icons.css">
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+  <link rel="stylesheet" href="assets/css/venobox.min.css">
+  <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    /* Greenish/Teal color theme overrides to match index.html branding */
+    :root {
+      --tj-color-theme-primary: #1e8a8a;
+      --tj-color-theme-bg: #f3f8f8;
+      --tj-color-theme-bg-2: #e9f3f3;
+      --tj-color-heading-primary: #0c1e21;
+      --tj-color-text-body: #364e52;
+      --primary-teal: #1e8a8a;
+      --mint-accent: #0f6c6c;
+    }
+
+    body {
+      background-color: #ffffff !important;
+      color: #364e52 !important;
+    }
+
+    .header-area {
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px) !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .mainmenu ul > li > a {
+      color: #0c1e21 !important;
+    }
+    
+    .mainmenu ul > li.current-menu-item > a,
+    .mainmenu ul > li.active > a, 
+    .mainmenu ul > li:hover > a {
+      color: var(--tj-color-theme-primary) !important;
+    }
+
+    .tj-primary-btn {
+      background: var(--primary-teal) !important;
+      border: 1px solid var(--primary-teal) !important;
+      color: #fff !important;
+    }
+    
+    .tj-primary-btn:hover {
+      background: transparent !important;
+      color: var(--mint-accent) !important;
+      border-color: var(--mint-accent) !important;
+    }
+
+    .blog-item .blog-content .blog-meta span.categories a {
+      color: var(--tj-color-theme-primary) !important;
+    }
+
+    .blog-item .blog-content .title a:hover {
+      color: var(--tj-color-theme-primary) !important;
+    }
+
+    .tj-main-sidebar .tj-sidebar-widget .widget-title::before {
+      background-color: var(--tj-color-theme-primary) !important;
+    }
+
+    .tj-main-sidebar .tj-sidebar-widget.widget-categories ul li a::after {
+      color: var(--tj-color-theme-primary) !important;
+    }
+
+    .tj-main-sidebar .tj-sidebar-widget.widget-tag-cloud .tagcloud a:hover {
+      background-color: var(--tj-color-theme-primary) !important;
+      border-color: var(--tj-color-theme-primary) !important;
+      color: #fff !important;
+    }
+
+    .tj-footer-section {
+      background-color: #081214 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+
+    /* Style for sidebar Call widget */
+    .sidebar-call-widget {
+      background: linear-gradient(135deg, #1e8a8a 0%, #0f6c6c 100%);
+      border-radius: 10px;
+      padding: 30px 25px;
+      text-align: center;
+      color: #fff;
+    }
+    .sidebar-call-widget h5 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .sidebar-call-widget p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="body-overlay"></div>
+
+  <!-- Preloader Start -->
+  <div class="tj-preloader is-loading">
+    <div class="tj-preloader-inner">
+      <div class="tj-preloader-ball-wrap">
+        <div class="tj-preloader-ball-inner-wrap">
+          <div class="tj-preloader-ball-inner">
+            <div class="tj-preloader-ball"></div>
+          </div>
+          <div class="tj-preloader-ball-shadow"></div>
+        </div>
+        <div id="tj-weave-anim" class="tj-preloader-text">Vidhai AI Solutions</div>
+      </div>
+    </div>
+    <div class="tj-preloader-overlay"></div>
+  </div>
+  <!-- Preloader end -->
+
+  <!-- back to top start -->
+  <div id="tj-back-to-top"><span id="tj-back-to-top-percentage"></span></div>
+  <!-- back to top end -->
+
+  <!-- start: Search Popup -->
+  <div class="search-popup-overlay"></div>
+  <!-- end: Search Popup -->
+
+  <!-- start: Offcanvas Menu -->
+  <div class="tj-offcanvas-area d-none d-lg-block">
+    <div class="hamburger_bg"></div>
+    <div class="hamburger_wrapper">
+      <div class="hamburger_inner">
+        <div class="hamburger_top d-flex align-items-center justify-content-between">
+          <div class="hamburger_logo">
+            <a href="index.html" class="mobile_logo">
+              <img src="assets/images/logo/vidhailogobg.png" alt="Logo" style="height:55px;width:auto;">
+            </a>
+          </div>
+          <div class="hamburger_close">
+            <button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button>
+          </div>
+        </div>
+        <div class="offcanvas-text">
+          <p>Vidhai AI Solutions — engineering intelligent enterprise software, ERP/CRM systems, and AI-powered tools for Tamil Nadu businesses.</p>
+        </div>
+        <div class="hamburger-infos">
+          <h5 class="hamburger-title">Contact Info</h5>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="subtitle">Phone</span>
+              <a class="contact-link" href="tel:9345504199">+91 9345504199</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Email</span>
+              <a class="contact-link" href="mailto:aividhai26@gmail.com">aividhai26@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Location</span>
+              <span class="contact-link">no7, muthu nagar, sidco road, tiruppur 641606</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hamburger-socials">
+        <h5 class="hamburger-title">Follow Us</h5>
+        <div class="social-links style-3">
+          <ul>
+            <li><a href="https://www.instagram.com/vidhai_ai_solutions?igsh=MnN3NDM2MzkxOXdy" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/vidhai-ai-solutions" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end: Offcanvas Menu -->
+
+  <!-- start: Hamburger Menu -->
+  <div class="hamburger-area d-lg-none">
+    <div class="hamburger_bg"></div>
+    <div class="hamburger_wrapper">
+      <div class="hamburger_inner">
+        <div class="hamburger_top d-flex align-items-center justify-content-between">
+          <div class="hamburger_logo">
+            <a href="index.html" class="mobile_logo">
+              <img src="assets/images/logo/vidhailogobg.png" alt="Logo" style="height:50px;width:auto;">
+            </a>
+          </div>
+          <div class="hamburger_close">
+            <button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button>
+          </div>
+        </div>
+        <div class="hamburger_menu">
+          <div class="mobile_menu"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end: Hamburger Menu -->
+
+  <!-- start: Header Area -->
+  <header class="header-area header-1 section-gap-x">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="header-wrapper">
+            <!-- site logo -->
+            <div class="site_logo">
+              <a class="logo" href="index.html">
+                <img src="assets/images/logo/vidhailogobg.png" alt="Vidhai AI" style="height:50px;width:auto;object-fit:contain;">
+              </a>
+            </div>
+
+            <!-- navigation -->
+            <div class="menu-area d-none d-lg-inline-flex align-items-center">
+              <nav id="mobile-menu" class="mainmenu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="service.html">Services</a></li>
+                  <li><a href="vidhai-services.html">Vidhai Services</a></li>
+                  <li class="current-menu-item"><a href="blog.html">Blog</a></li>
+                  <li><a href="careers.html">Careers</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- header right info -->
+            <div class="header-right-item d-none d-lg-inline-flex">
+              <div class="header-search">
+                <button class="search">
+                  <i class="tji-search"></i>
+                </button>
+                <button type="button" class="search_close_btn">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+              <div class="header-button">
+                <a class="tj-primary-btn" href="contact.html">
+                  <span class="btn-text"><span>Let's Talk</span></span>
+                  <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                </a>
+              </div>
+              <div class="menu_bar menu_offcanvas d-none d-lg-inline-flex">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <!-- menu bar -->
+            <div class="menu_bar mobile_menu_bar d-lg-none">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Popup -->
+    <div class="search_popup">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-8">
+            <div class="tj_search_wrapper">
+              <div class="search_form">
+                <form action="#">
+                  <div class="search_input">
+                    <div class="search-box">
+                      <input class="search-form-input" type="text" placeholder="Type Words and Hit Enter" required>
+                      <button type="submit">
+                        <i class="tji-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end: Header Area -->
+
+  <!-- duplicate sticky header -->
+  <header class="header-area header-1 header-duplicate header-sticky section-gap-x">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="header-wrapper">
+            <!-- site logo -->
+            <div class="site_logo">
+              <a class="logo" href="index.html">
+                <img src="assets/images/logo/vidhailogobg.png" alt="Vidhai AI" style="height:50px;width:auto;object-fit:contain;">
+              </a>
+            </div>
+
+            <!-- navigation -->
+            <div class="menu-area d-none d-lg-inline-flex align-items-center">
+              <nav class="mainmenu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="service.html">Services</a></li>
+                  <li><a href="vidhai-services.html">Vidhai Services</a></li>
+                  <li class="current-menu-item"><a href="blog.html">Blog</a></li>
+                  <li><a href="careers.html">Careers</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- header right info -->
+            <div class="header-right-item d-none d-lg-inline-flex">
+              <div class="header-button">
+                <a class="tj-primary-btn" href="contact.html">
+                  <span class="btn-text"><span>Let's Talk</span></span>
+                  <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                </a>
+              </div>
+            </div>
+            <div class="menu_bar mobile_menu_bar d-lg-none">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main id="primary" class="site-main">
+        <div class="space-for-header"></div>
+        
+        <!-- start: Breadcrumb Section -->
+        <section class="tj-page-header section-gap-x" data-bg-image="assets/images/bg/pheader-bg.webp">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="tj-page-header-content text-center">
+                  <h1 class="tj-page-title">Read Blog</h1>
+                  <div class="tj-page-link">
+                    <span><i class="tji-home"></i></span>
+                    <span>
+                      <a href="index.html">Home</a>
+                    </span>
+                    <span><i class="tji-arrow-right"></i></span>
+                    <span>
+                      <span>Blog</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-header-overlay" data-bg-image="assets/images/shape/pheader-overlay.webp"></div>
+        </section>
+        <!-- end: Breadcrumb Section -->
+
+        <!-- start: Blog Section -->
+        <section class="tj-blog-section section-gap slidebar-stickiy-container">
+          <div class="container">
+            <div class="row row-gap-5">
+              <div class="col-lg-8">
+                <div class="blog-post-wrapper">
+                  
+                  <!-- Post 1 -->
+                  <article class="blog-item wow fadeInUp" data-wow-delay=".1s">
+                    <div class="blog-thumb">
+                      <a href="blog.html"><img src="assets/images/vidhaiimages/AI Research Development Concept.webp" alt="Generative AI"></a>
+                      <div class="blog-date">
+                        <span class="date">15</span>
+                        <span class="month">Jun</span>
+                      </div>
+                    </div>
+                    <div class="blog-content">
+                      <div class="blog-meta">
+                        <span class="categories"><a href="blog.html">Generative AI</a></span>
+                        <span>By <a href="blog.html">Vidhai Team</a></span>
+                      </div>
+                      <h3 class="title"><a href="blog.html">How Generative AI is Transforming Small Businesses in Tamil Nadu</a></h3>
+                      <p class="desc">From automating customer support to generating personalized marketing content — local businesses are discovering how AI tools once reserved for MNCs are now accessible and affordable. We break down 5 practical use cases with real ROI numbers.</p>
+                      <a class="text-btn" href="blog.html">
+                        <span class="btn-text"><span>Read More</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </article>
+
+                  <!-- Post 2 -->
+                  <article class="blog-item wow fadeInUp" data-wow-delay=".3s">
+                    <div class="blog-thumb">
+                      <a href="blog.html"><img src="assets/images/vidhaiimages/KMS School ERP Interface Preview.webp" alt="School ERP"></a>
+                      <div class="blog-date">
+                        <span class="date">10</span>
+                        <span class="month">Jun</span>
+                      </div>
+                    </div>
+                    <div class="blog-content">
+                      <div class="blog-meta">
+                        <span class="categories"><a href="blog.html">ERP & CRM</a></span>
+                        <span>By <a href="blog.html">Vidhai Team</a></span>
+                      </div>
+                      <h3 class="title"><a href="blog.html">Why Every School Needs a Custom ERP System in 2026</a></h3>
+                      <p class="desc">Manual registers, fee books, and SMS blasts are dead. Here's how Kongu Matric School saved 85% of their admin time and automated tracking, billing, and communication processes.</p>
+                      <a class="text-btn" href="blog.html">
+                        <span class="btn-text"><span>Read More</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </article>
+
+                  <!-- Post 3 -->
+                  <article class="blog-item wow fadeInUp" data-wow-delay=".5s">
+                    <div class="blog-thumb">
+                      <a href="blog.html"><img src="assets/images/vidhaiimages/Vidhai Enterprise Software Dashboard Showcase mockup.webp" alt="Web Dev"></a>
+                      <div class="blog-date">
+                        <span class="date">05</span>
+                        <span class="month">Jun</span>
+                      </div>
+                    </div>
+                    <div class="blog-content">
+                      <div class="blog-meta">
+                        <span class="categories"><a href="blog.html">Web Development</a></span>
+                        <span>By <a href="blog.html">Vidhai Team</a></span>
+                      </div>
+                      <h3 class="title"><a href="blog.html">₹15,000 Website vs ₹1.5L Custom Web App — When to Choose What?</a></h3>
+                      <p class="desc">Not every business needs a complex full-stack web application. We explain when a fast static website is enough and when you need a custom system to power operations.</p>
+                      <a class="text-btn" href="blog.html">
+                        <span class="btn-text"><span>Read More</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </article>
+
+                  <!-- Post 4 -->
+                  <article class="blog-item wow fadeInUp" data-wow-delay=".5s">
+                    <div class="blog-thumb">
+                      <a href="blog.html"><img src="assets/images/vidhaiimages/Thendral City CRM Interface Preview.webp" alt="Construction CRM"></a>
+                      <div class="blog-date">
+                        <span class="date">28</span>
+                        <span class="month">May</span>
+                      </div>
+                    </div>
+                    <div class="blog-content">
+                      <div class="blog-meta">
+                        <span class="categories"><a href="blog.html">Case Studies</a></span>
+                        <span>By <a href="blog.html">Vidhai Team</a></span>
+                      </div>
+                      <h3 class="title"><a href="blog.html">Case Study: How We Built a CRM for Thendral City Developers</a></h3>
+                      <p class="desc">A deep dive into how we engineered a custom construction CRM with material invoicing, supervisor payroll trackers, and real-time budget dashboards in under 6 weeks.</p>
+                      <a class="text-btn" href="blog.html">
+                        <span class="btn-text"><span>Read More</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </article>
+
+                  <!-- Post 5 -->
+                  <article class="blog-item wow fadeInUp" data-wow-delay=".5s">
+                    <div class="blog-thumb">
+                      <a href="blog.html"><img src="assets/images/vidhaiimages/Software Analytics Metrics Success Chart.webp" alt="SEO"></a>
+                      <div class="blog-date">
+                        <span class="date">20</span>
+                        <span class="month">May</span>
+                      </div>
+                    </div>
+                    <div class="blog-content">
+                      <div class="blog-meta">
+                        <span class="categories"><a href="blog.html">Digital Marketing</a></span>
+                        <span>By <a href="blog.html">Vidhai Team</a></span>
+                      </div>
+                      <h3 class="title"><a href="blog.html">SEO in 2026: What Tamil Nadu Local Businesses Must Know</a></h3>
+                      <p class="desc">Google's AI-first search search updates have changed standard SEO. We explain the core metrics that matter for ranking in local searches in Tamil Nadu today.</p>
+                      <a class="text-btn" href="blog.html">
+                        <span class="btn-text"><span>Read More</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </article>
+
+                  <!-- Post 6 -->
+                  <article class="blog-item wow fadeInUp" data-wow-delay=".5s">
+                    <div class="blog-thumb">
+                      <a href="blog.html"><img src="assets/images/vidhaiimages/opt1greenishtheme.webp" alt="Chatbot RAG"></a>
+                      <div class="blog-date">
+                        <span class="date">12</span>
+                        <span class="month">May</span>
+                      </div>
+                    </div>
+                    <div class="blog-content">
+                      <div class="blog-meta">
+                        <span class="categories"><a href="blog.html">Generative AI</a></span>
+                        <span>By <a href="blog.html">Vidhai Team</a></span>
+                      </div>
+                      <h3 class="title"><a href="blog.html">Building an AI Chatbot Trained on Your Business Data with RAG</a></h3>
+                      <p class="desc">RAG (Retrieval-Augmented Generation) lets you build chatbots that securely answer user questions using your custom files, products data sheet, and specific FAQs.</p>
+                      <a class="text-btn" href="blog.html">
+                        <span class="btn-text"><span>Read More</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </article>
+
+                  <!-- Post 7 -->
+                  <article class="blog-item wow fadeInUp" data-wow-delay=".5s">
+                    <div class="blog-thumb">
+                      <a href="blog.html"><img src="assets/images/vidhaiimages/Real Student Headshots.webp" alt="Students incubation"></a>
+                      <div class="blog-date">
+                        <span class="date">05</span>
+                        <span class="month">May</span>
+                      </div>
+                    </div>
+                    <div class="blog-content">
+                      <div class="blog-meta">
+                        <span class="categories"><a href="blog.html">Talent & Growth</a></span>
+                        <span>By <a href="blog.html">Vidhai Team</a></span>
+                      </div>
+                      <h3 class="title"><a href="blog.html">How We're Training the Next Generation of AI Engineers in Tiruppur</a></h3>
+                      <p class="desc">Our MOU incubation programs with colleges have trained 500+ students on production AI systems. Learn how we structure our hands-on project syllabus.</p>
+                      <a class="text-btn" href="blog.html">
+                        <span class="btn-text"><span>Read More</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </article>
+
+                </div>
+              </div>
+
+              <!-- Sidebar Column -->
+              <div class="col-lg-4">
+                <div class="tj-main-sidebar slidebar-stickiy">
+                  
+                  <!-- Search Widget -->
+                  <div class="tj-sidebar-widget widget-search wow fadeInUp" data-wow-delay=".1s">
+                    <h4 class="widget-title">Search here</h4>
+                    <div class="search-box">
+                      <form action="#" onsubmit="event.preventDefault();">
+                        <input type="search" name="search" id="searchTwo" placeholder="Search here">
+                        <button type="submit" value="search">
+                          <i class="tji-search"></i>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+
+                  <!-- Recent Posts Widget -->
+                  <div class="tj-sidebar-widget tj-recent-posts wow fadeInUp" data-wow-delay=".3s">
+                    <h4 class="widget-title">Related post</h4>
+                    <ul>
+                      <li>
+                        <div class="post-thumb">
+                          <a href="blog.html"><img src="assets/images/vidhaiimages/AI Research Development Concept.webp" alt="Blog Thumbnail"></a>
+                        </div>
+                        <div class="post-content">
+                          <h6 class="post-title">
+                            <a href="blog.html">How Generative AI is Transforming Small Businesses</a>
+                          </h6>
+                          <div class="blog-meta">
+                            <ul>
+                              <li>15 JUN 2026</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="post-thumb">
+                          <a href="blog.html"><img src="assets/images/vidhaiimages/KMS School ERP Interface Preview.webp" alt="Blog Thumbnail"></a>
+                        </div>
+                        <div class="post-content">
+                          <h6 class="post-title">
+                            <a href="blog.html">Why Every School Needs a Custom ERP System</a>
+                          </h6>
+                          <div class="blog-meta">
+                            <ul>
+                              <li>10 JUN 2026</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="post-thumb">
+                          <a href="blog.html"><img src="assets/images/vidhaiimages/Thendral City CRM Interface Preview.webp" alt="Blog Thumbnail"></a>
+                        </div>
+                        <div class="post-content">
+                          <h6 class="post-title">
+                            <a href="blog.html">Case Study: How We Built a CRM for Thendral City</a>
+                          </h6>
+                          <div class="blog-meta">
+                            <ul>
+                              <li>28 MAY 2026</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Categories Widget -->
+                  <div class="tj-sidebar-widget widget-categories wow fadeInUp" data-wow-delay=".5s">
+                    <h4 class="widget-title">Categories</h4>
+                    <ul>
+                      <li><a href="blog.html">Generative AI<span class="number">(02)</span></a></li>
+                      <li><a href="blog.html">ERP & CRM<span class="number">(02)</span></a></li>
+                      <li><a href="blog.html">Web Development<span class="number">(01)</span></a></li>
+                      <li><a href="blog.html">Case Studies<span class="number">(01)</span></a></li>
+                      <li><a href="blog.html">Digital Marketing<span class="number">(01)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Tags Widget -->
+                  <div class="tj-sidebar-widget widget-tag-cloud wow fadeInUp" data-wow-delay=".7s">
+                    <h4 class="widget-title">Tags</h4>
+                    <nav>
+                      <div class="tagcloud">
+                        <a href="blog.html">AI</a>
+                        <a href="blog.html">ERP</a>
+                        <a href="blog.html">CRM</a>
+                        <a href="blog.html">Web</a>
+                        <a href="blog.html">SEO</a>
+                        <a href="blog.html">RAG</a>
+                        <a href="blog.html">Tiruppur</a>
+                        <a href="blog.html">College</a>
+                        <a href="blog.html">Startup</a>
+                      </div>
+                    </nav>
+                  </div>
+
+                  <!-- Call to Action widget inside Sidebar -->
+                  <div class="tj-sidebar-widget wow fadeInUp" data-wow-delay=".8s" style="padding:0; border:none; background:transparent;">
+                    <div class="sidebar-call-widget">
+                      <h5>Have a Project Idea?</h5>
+                      <p>Book a free 20-minute discovery call with our team and get expert advice for your business.</p>
+                      <a class="tj-primary-btn btn-dark" href="contact.html">
+                        <span class="btn-text"><span>Get in Touch</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Blog Section -->
+
+        <!-- start: Cta Section -->
+        <section class="tj-cta-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="cta-area">
+                  <div class="cta-content">
+                    <h2 class="title title-anim">Let's Build Your Digital Future Together.</h2>
+                    <div class="cta-btn wow fadeInUp" data-wow-delay=".6s">
+                      <a class="tj-primary-btn btn-dark" href="contact.html">
+                        <span class="btn-text"><span>Get Started Now</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="cta-img">
+                    <img src="assets/images/vidhaiimages/Vidhai Customer Support Mockup.webp" alt="Vidhai CTA">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Cta Section -->
+      </main>
+
+      <!-- start: Footer Section -->
+      <footer class="tj-footer-section footer-1 section-gap-x" style="padding-bottom: 30px; background: #081214; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <img src="assets/images/logo/vidhailogobg.png" alt="Logo" style="height: 60px; width: auto; object-fit: contain; margin-bottom: 25px;">
+                <p style="color: #a9b8b8; line-height: 1.6;">Empowering local enterprises with high-performance digital tools, machine learning insights, and enterprise automation.</p>
+                <div class="social-links d-flex gap-3 mt-4">
+                  <a href="https://www.instagram.com/vidhai_ai_solutions?igsh=MnN3NDM2MzkxOXdy" target="_blank" style="background: rgba(255, 255, 255, 0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/company/vidhai-ai-solutions" target="_blank" style="background: rgba(255, 255, 255, 0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4 style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 25px;">Quick Links</h4>
+                <div class="row">
+                  <div class="col-6">
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                      <li style="margin-bottom: 12px;"><a href="index.html" style="color: #a9b8b8; text-decoration: none;">Home</a></li>
+                      <li style="margin-bottom: 12px;"><a href="about.html" style="color: #a9b8b8; text-decoration: none;">About</a></li>
+                      <li style="margin-bottom: 12px;"><a href="service.html" style="color: #a9b8b8; text-decoration: none;">Services</a></li>
+                      <li style="margin-bottom: 12px;"><a href="contact.html" style="color: #a9b8b8; text-decoration: none;">Contact</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                      <li style="margin-bottom: 12px;"><a href="vidhai-services.html" style="color: #a9b8b8; text-decoration: none;">Custom Service</a></li>
+                      <li style="margin-bottom: 12px;"><a href="faq.html" style="color: #a9b8b8; text-decoration: none;">FAQ</a></li>
+                      <li style="margin-bottom: 12px;"><a href="careers.html" style="color: #a9b8b8; text-decoration: none;">Programs</a></li>
+                      <li style="margin-bottom: 12px;"><a href="service.html" style="color: #a9b8b8; text-decoration: none;">Software Services</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4 style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 25px;">Our Branches</h4>
+                <p style="color: #a9b8b8; margin-bottom: 10px; font-size: 13px; line-height: 1.4;"><i class="fa-solid fa-map-pin" style="color: var(--primary-teal); margin-right: 10px;"></i> <strong>Tiruppur (HO):</strong> no7, muthu nagar, sidco road, tiruppur 641606</p>
+                <p style="color: #a9b8b8; margin-bottom: 15px; font-size: 13px; line-height: 1.4;"><i class="fa-solid fa-map-pin" style="color: var(--primary-teal); margin-right: 10px;"></i> <strong>Hosur Branch:</strong> 2/339, 2nd St, Kamaraj Nagar, Leyland, Hosur 635126</p>
+                <p style="color: #a9b8b8; margin-bottom: 10px;"><i class="fa-solid fa-phone" style="color: var(--primary-teal); margin-right: 10px;"></i> +91 9345504199</p>
+                <p style="color: #a9b8b8; margin-bottom: 15px;"><i class="fa-solid fa-envelope" style="color: var(--primary-teal); margin-right: 10px;"></i> aividhai26@gmail.com</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4 style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 25px;">Newsletter</h4>
+                <p style="color: #a9b8b8; margin-bottom: 20px;">Subscribe to our newsletter for latest updates.</p>
+                <form action="#" class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                  <div class="form-group" style="position: relative; margin-bottom: 15px;">
+                    <input type="email" placeholder="Your Email" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; padding: 12px 15px; width: 100%; border-radius: 6px; font-size: 14px;" required>
+                    <button type="submit" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: var(--primary-teal); border: none; color: #fff; width: 35px; height: 35px; border-radius: 4px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;"><i class="fa-solid fa-paper-plane"></i></button>
+                  </div>
+                  <div class="form-check d-flex align-items-start gap-2" style="margin: 0; padding: 0;">
+                    <input type="checkbox" id="newsletter-agree" style="margin-top: 4px; cursor: pointer;" required>
+                    <label for="newsletter-agree" style="color: #a9b8b8; font-size: 12px; line-height: 1.4; cursor: pointer; user-select: none;">I agree to the <a href="faq.html" style="color: var(--primary-teal); text-decoration: none;">Terms & Conditions</a></label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <hr style="border-top: 1px solid rgba(255,255,255,0.08); margin: 50px 0 25px;">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-md-start text-center">
+              <p style="color: #67787a; margin: 0;">&copy; 2026 <a href="index.html" style="color: var(--mint-accent); text-decoration: none;">Vidhai AI Solutions</a>. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end: Footer Section -->
+    </div>
+  </div>
+
+  <!-- JS here -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollSmoother.js"></script>
+  <script src="assets/js/gsap-scroll-to-plugin.min.js"></script>
+  <script src="assets/js/gsap-scroll-trigger.min.js"></script>
+  <script src="assets/js/gsap-split-text.min.js"></script>
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <script src="assets/js/swiper.min.js"></script>
+  <script src="assets/js/odometer.min.js"></script>
+  <script src="assets/js/venobox.min.js"></script>
+  <script src="assets/js/appear.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/meanmenu.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

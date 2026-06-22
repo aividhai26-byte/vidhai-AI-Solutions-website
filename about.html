@@ -1,0 +1,1146 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn about Vidhai AI Solutions - Our mission, vision, guides, and core technology offerings.">
+
+  <!-- Site Title -->
+  <title>About Us - Vidhai AI Solutions</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/vidhailogobg.png">
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/bexon-icons.css">
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+  <link rel="stylesheet" href="assets/css/venobox.min.css">
+  <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    /* Bright White and Greenish Theme Overrides */
+    :root {
+      --tj-color-bg-1: #ffffff;
+      --tj-color-bg-2: #ffffff;
+      --tj-color-theme-primary: #1e8a8a;
+      --tj-color-theme-bg: #f3f8f8;
+      --tj-color-theme-bg-2: #e9f3f3;
+      --tj-color-border-4: rgba(0, 0, 0, 0.08);
+      --primary-teal: #1e8a8a;
+      --mint-accent: #0f6c6c;
+      --tj-color-heading-primary: #0c1e21;
+      --tj-color-text-body: #364e52;
+    }
+    
+    body {
+      background-color: #ffffff !important;
+      color: #364e52 !important;
+    }
+
+    .header-area {
+      background: rgba(255, 255, 255, 0.9) !important;
+      backdrop-filter: blur(10px) !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .header-area .logo img {
+      filter: none !important;
+    }
+
+    .mainmenu ul > li > a {
+      color: #0c1e21 !important;
+    }
+    
+    .mainmenu ul > li.active > a, 
+    .mainmenu ul > li:hover > a {
+      color: var(--tj-color-theme-primary) !important;
+    }
+
+    .tj-primary-btn {
+      background: var(--primary-teal) !important;
+      border: 1px solid var(--primary-teal) !important;
+      color: #fff !important;
+    }
+    
+    .tj-primary-btn:hover {
+      background: transparent !important;
+      color: var(--mint-accent) !important;
+      border-color: var(--mint-accent) !important;
+    }
+
+    .tj-footer-section {
+      background-color: #081214 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+
+    /* Client logos contrast */
+    .client-logo img {
+      filter: grayscale(100%) brightness(0.3) contrast(1.2);
+      transition: all 0.3s ease;
+    }
+
+    .client-logo img:hover {
+      filter: none;
+    }
+    
+    /* Choose Us details light overrides */
+    .tj-choose-section {
+      background-color: #ffffff !important;
+    }
+    
+    .choose-box {
+      background: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02) !important;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    
+    .choose-box:hover {
+      border-color: var(--primary-teal) !important;
+      transform: translateY(-5px);
+    }
+    
+    .choose-box .title {
+      color: #0c1e21 !important;
+    }
+    
+    .choose-box .desc {
+      color: #556c70 !important;
+    }
+    
+    /* About Us section details */
+    .tj-about-section-2 {
+      background-color: #f7fafc !important;
+    }
+    
+    .tj-about-section-2 .sec-title {
+      color: #0c1e21 !important;
+    }
+    
+    .tj-about-section-2 .sec-title span {
+      color: var(--primary-teal) !important;
+    }
+    
+    .mission-vision-box {
+      background: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+      border-radius: 12px;
+      padding: 30px !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02) !important;
+    }
+    
+    .mission-vision-box .title {
+      color: #0c1e21 !important;
+    }
+    
+    .mission-vision-box .desc {
+      color: #556c70 !important;
+    }
+    
+    .mission-vision-box .list-items li {
+      color: #364e52 !important;
+    }
+    
+    .mission-vision-box .list-items li i {
+      color: var(--primary-teal) !important;
+    }
+    
+    .progress-box.style-2 {
+      background: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+      border-radius: 12px;
+      padding: 30px !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02) !important;
+    }
+    
+    .progress-box.style-2 .title {
+      color: #0c1e21 !important;
+    }
+    
+    .tj-progress-list li .tj-progress-title {
+      color: #364e52 !important;
+    }
+    
+    .tj-progress-list li .tj-progress-percent {
+      color: var(--primary-teal) !important;
+    }
+
+    /* Testimonials section */
+    .tj-testimonial-section-2 {
+      background-color: #ffffff !important;
+    }
+    
+    .tj-testimonial-section-2 .sec-title {
+      color: #0c1e21 !important;
+    }
+    
+    .tj-testimonial-section-2 .sec-title span {
+      color: var(--primary-teal) !important;
+    }
+    
+    .rating-box {
+      background: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02) !important;
+    }
+    
+    .rating-box .title {
+      color: #0c1e21 !important;
+    }
+    
+    .rating-box .rating-text {
+      color: #556c70 !important;
+    }
+    
+    .testimonial-item {
+      background: #f7fafc !important;
+      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+      border-radius: 12px;
+      padding: 40px !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02) !important;
+    }
+    
+    .testimonial-item .desc p {
+      color: #556c70 !important;
+      font-style: italic;
+    }
+    
+    .testimonial-item .testimonial-author .author-header .title {
+      color: #0c1e21 !important;
+    }
+    
+    .testimonial-item .testimonial-author .author-header .designation {
+      color: #556c70 !important;
+    }
+    
+    .testimonial-item .quote-icon i {
+      color: rgba(30, 138, 138, 0.15) !important;
+    }
+
+    /* Team section */
+    .tj-team-section-3 {
+      background-color: #f7fafc !important;
+    }
+    
+    .tj-team-section-3 .sec-title {
+      color: #0c1e21 !important;
+    }
+    
+    .tj-team-section-3 .sec-title span {
+      color: var(--primary-teal) !important;
+    }
+    
+    .team-item {
+      background: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02) !important;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .team-item:hover {
+      border-color: var(--primary-teal) !important;
+      transform: translateY(-5px);
+    }
+    
+    .team-item .team-content {
+      background: #ffffff !important;
+      border-top: 1px solid rgba(0, 0, 0, 0.04) !important;
+      padding: 25px !important;
+    }
+    
+    .team-item .team-content .title a {
+      color: #0c1e21 !important;
+    }
+    
+    .team-item .team-content .title a:hover {
+      color: var(--primary-teal) !important;
+    }
+    
+    .team-item .team-content .designation {
+      color: var(--primary-teal) !important;
+      font-weight: 600;
+    }
+    
+    .team-item .team-content .mail-at {
+      background: var(--tj-color-theme-bg) !important;
+      color: var(--primary-teal) !important;
+    }
+
+    /* FAQ section */
+    .tj-faq-section {
+      background-color: #ffffff !important;
+    }
+    
+    .tj-faq-section .sec-title {
+      color: #0c1e21 !important;
+    }
+    
+    .tj-faq-section .sec-title span {
+      color: var(--primary-teal) !important;
+    }
+    
+    .tj-faq-section .content-wrap p.desc {
+      color: #556c70 !important;
+    }
+    
+    .accordion-item {
+      background-color: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      border-radius: 8px !important;
+      margin-bottom: 15px !important;
+      overflow: hidden;
+    }
+    
+    .accordion-item .faq-title {
+      color: #0c1e21 !important;
+      font-weight: 700 !important;
+      background: #f7fafc !important;
+    }
+    
+    .accordion-item .faq-title:not(.collapsed) {
+      color: #ffffff !important;
+      background: var(--primary-teal) !important;
+    }
+    
+    .accordion-item .faq-text {
+      color: #556c70 !important;
+      background: #ffffff !important;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="body-overlay"></div>
+
+  <!-- Preloader Start -->
+  <div class="tj-preloader is-loading">
+    <div class="tj-preloader-inner">
+      <div class="tj-preloader-ball-wrap">
+        <div class="tj-preloader-ball-inner-wrap">
+          <div class="tj-preloader-ball-inner">
+            <div class="tj-preloader-ball"></div>
+          </div>
+          <div class="tj-preloader-ball-shadow"></div>
+        </div>
+        <div id="tj-weave-anim" class="tj-preloader-text">Vidhai AI Solutions</div>
+      </div>
+    </div>
+    <div class="tj-preloader-overlay"></div>
+  </div>
+  <!-- Preloader end -->
+
+  <!-- back to top start -->
+  <div id="tj-back-to-top"><span id="tj-back-to-top-percentage"></span></div>
+  <!-- back to top end -->
+
+  <!-- start: Offcanvas Menu -->
+  <div class="tj-offcanvas-area d-none d-lg-block">
+    <div class="hamburger_bg"></div>
+    <div class="hamburger_wrapper">
+      <div class="hamburger_inner">
+        <div class="hamburger_top d-flex align-items-center justify-content-between">
+          <div class="hamburger_logo">
+            <a href="index.html" class="mobile_logo">
+              <img src="assets/images/logo/vidhailogobg.png" alt="Logo" style="height: 55px; width: auto; object-fit: contain;">
+            </a>
+          </div>
+          <div class="hamburger_close">
+            <button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button>
+          </div>
+        </div>
+        <div class="offcanvas-text">
+          <p>Vidhai AI Solutions delivers cutting-edge Generative AI, custom software architectures, and talent incubation programs for enterprise transformation.</p>
+        </div>
+        <div class="hamburger-infos">
+          <h5 class="hamburger-title">Contact Info</h5>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="subtitle">Phone</span>
+              <a class="contact-link" href="tel:9345504199">+91 9345504199</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Email</span>
+              <a class="contact-link" href="mailto:aividhai26@gmail.com">aividhai26@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Location</span>
+              <span class="contact-link">no7, muthu nagar, sidco road, tiruppur 641606</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end: Offcanvas Menu -->
+
+  <!-- start: Hamburger Menu -->
+  <div class="hamburger-area d-lg-none">
+    <div class="hamburger_bg"></div>
+    <div class="hamburger_wrapper">
+      <div class="hamburger_inner">
+        <div class="hamburger_top d-flex align-items-center justify-content-between">
+          <div class="hamburger_logo">
+            <a href="index.html" class="mobile_logo">
+              <img src="assets/images/logo/vidhailogobg.png" alt="Logo" style="height: 55px; width: auto; object-fit: contain;">
+            </a>
+          </div>
+          <div class="hamburger_close">
+            <button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button>
+          </div>
+        </div>
+        <div class="hamburger_menu">
+          <div class="mobile_menu"></div>
+        </div>
+        <div class="hamburger-infos">
+          <h5 class="hamburger-title">Contact Info</h5>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="subtitle">Phone</span>
+              <a class="contact-link" href="tel:9345504199">+91 9345504199</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Email</span>
+              <a class="contact-link" href="mailto:aividhai26@gmail.com">aividhai26@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Location</span>
+              <span class="contact-link">no7, muthu nagar, sidco road, tiruppur 641606</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end: Hamburger Menu -->
+
+  <!-- start: Header Area -->
+  <header class="header-area header-2 header-absolute section-gap-x">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="header-wrapper">
+            <!-- site logo -->
+            <div class="site_logo">
+              <a class="logo" href="index.html">
+                <img src="assets/images/logo/vidhailogobg.png" alt="Vidhai AI Logo" style="height: 50px; width: auto; object-fit: contain;">
+              </a>
+            </div>
+
+            <!-- navigation -->
+            <div class="menu-area d-none d-lg-inline-flex align-items-center">
+              <nav id="mobile-menu" class="mainmenu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li class="active"><a href="about.html">About Us</a></li>
+                  <li><a href="service.html">Services</a></li>
+                  <li><a href="vidhai-services.html">Vidhai Services</a></li>
+                  <li><a href="team.html">Team</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="careers.html">Careers</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- header right info -->
+            <div class="header-right-item d-none d-lg-inline-flex">
+              <div class="header-button">
+                <a class="tj-primary-btn" href="contact.html">
+                  <span class="btn-text"><span>Let's Talk</span></span>
+                  <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                </a>
+              </div>
+              <div class="menu_bar menu_offcanvas d-none d-lg-inline-flex">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <!-- menu bar -->
+            <div class="menu_bar mobile_menu_bar d-lg-none">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end: Header Area -->
+
+  <!-- start: Sticky Header Area -->
+  <header class="header-area header-2 header-duplicate header-sticky section-gap-x">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="header-wrapper">
+            <!-- site logo -->
+            <div class="site_logo">
+              <a class="logo" href="index.html">
+                <img src="assets/images/logo/vidhailogobg.png" alt="Vidhai AI Logo" style="height: 50px; width: auto; object-fit: contain;">
+              </a>
+            </div>
+
+            <!-- navigation -->
+            <div class="menu-area d-none d-lg-inline-flex align-items-center">
+              <nav class="mainmenu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li class="active"><a href="about.html">About Us</a></li>
+                  <li><a href="service.html">Services</a></li>
+                  <li><a href="vidhai-services.html">Vidhai Services</a></li>
+                  <li><a href="team.html">Team</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="careers.html">Careers</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- header right info -->
+            <div class="header-right-item d-none d-lg-inline-flex">
+              <div class="header-button">
+                <a class="tj-primary-btn" href="contact.html">
+                  <span class="btn-text"><span>Let's Talk</span></span>
+                  <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                </a>
+              </div>
+            </div>
+
+            <!-- menu bar -->
+            <div class="menu_bar mobile_menu_bar d-lg-none">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end: Sticky Header Area -->
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main id="primary" class="site-main">
+        <div class="top-space-15"></div>
+
+        <!-- start: Breadcrumb Section -->
+        <section class="tj-page-header section-gap-x" data-bg-image="assets/images/bg/pheader-bg.webp" style="background-image: url('assets/images/bg/pheader-bg.webp'); background-size: cover; background-position: center; position: relative;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="tj-page-header-content text-center" style="position: relative; z-index: 5;">
+                  <h1 class="tj-page-title" style="color: #ffffff; font-size: 48px; font-weight: 800; margin-bottom: 15px;">About Us</h1>
+                  <div class="tj-page-link" style="color: #a9b8b8; font-size: 16px;">
+                    <span><a href="index.html" style="color: var(--primary-teal); text-decoration: none;"><i class="tji-home" style="margin-right: 5px;"></i>Home</a></span>
+                    <span style="margin: 0 10px;"><i class="fa-solid fa-chevron-right"></i></span>
+                    <span>About Us</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-header-overlay" data-bg-image="assets/images/shape/pheader-overlay.webp" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.85; z-index: 1;"></div>
+        </section>
+        <!-- end: Breadcrumb Section -->
+
+        <!-- start: Choose Section -->
+        <section id="choose" class="tj-choose-section section-gap">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="sec-heading-wrap">
+                  <span class="sub-title wow fadeInUp" data-wow-delay=".3s" style="color: var(--primary-teal); font-weight: 600;"><i class="tji-box" style="margin-right: 8px;"></i>Choose the Best</span>
+                  <div class="heading-wrap-content">
+                    <div class="sec-heading">
+                      <h2 class="sec-title title-anim">Empowering Enterprises with <span>Intelligent Tech.</span></h2>
+                    </div>
+                    <div class="btn-wrap wow fadeInUp" data-wow-delay=".6s">
+                      <a class="tj-primary-btn" href="contact.html">
+                        <span class="btn-text"><span>Request a Call</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-gap-4 rightSwipeWrap">
+              <div class="col-lg-4">
+                <div class="choose-box right-swipe">
+                  <div class="choose-content">
+                    <div class="choose-icon" style="color: var(--primary-teal);">
+                      <i class="tji-innovative"></i>
+                    </div>
+                    <h4 class="title">Enterprise AI Systems</h4>
+                    <p class="desc">We build and deploy production-ready Large Language Model integrations, custom search embeddings, and business process automation solutions.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="choose-box right-swipe">
+                  <div class="choose-content">
+                    <div class="choose-icon" style="color: var(--primary-teal);">
+                      <i class="tji-award"></i>
+                    </div>
+                    <h4 class="title">Scalable Architectures</h4>
+                    <p class="desc">From advanced materials billing databases (CRM) to secure academic records managers (ERP), our structures are optimized for performance and security.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="choose-box right-swipe">
+                  <div class="choose-content">
+                    <div class="choose-icon" style="color: var(--primary-teal);">
+                      <i class="tji-support"></i>
+                    </div>
+                    <h4 class="title">Talent Incubation</h4>
+                    <p class="desc">Through collaboration agreements (MOUs) with regional institutions, we structure developer bootcamps and active production internship pipelines.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Choose Section -->
+
+        <!-- start: About Section -->
+        <section class="tj-about-section-2 section-gap section-gap-x">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-6 col-lg-6 order-lg-1 order-2">
+                <div class="about-img-area style-2 wow fadeInLeft" data-wow-delay=".3s">
+                  <div class="about-img overflow-hidden" style="border-radius: 12px;">
+                    <img data-speed=".8" src="assets/images/vidhaiimages/Official Team Photo  Office Showcase.webp" alt="Vidhai Team Collaboration" style="max-height: 480px; width: 100%; object-fit: cover;">
+                  </div>
+                  <div class="box-area style-2 mt-4">
+                    <div class="progress-box style-2 wow fadeInUp" data-wow-delay=".3s">
+                      <h4 class="title">System Performance & Integration</h4>
+                      <ul class="tj-progress-list">
+                        <li>
+                          <h6 class="tj-progress-title">Enterprise Software Delivery</h6>
+                          <div class="tj-progress">
+                            <span class="tj-progress-percent">95%</span>
+                            <div class="tj-progress-bar" data-percent="95" style="background: var(--primary-teal); height: 6px; border-radius: 3px;">
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <h6 class="tj-progress-title">Certified Intern Success</h6>
+                          <div class="tj-progress">
+                            <span class="tj-progress-percent">90%</span>
+                            <div class="tj-progress-bar" data-percent="90" style="background: var(--primary-teal); height: 6px; border-radius: 3px;">
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 order-lg-2 order-1">
+                <div class="about-content-area">
+                  <div class="sec-heading">
+                    <span class="sub-title wow fadeInUp" data-wow-delay=".3s" style="color: var(--primary-teal); font-weight: 600;"><i class="tji-box" style="margin-right: 8px;"></i>Get to Know Us</span>
+                    <h2 class="sec-title title-anim">Bridging Local Engineering Trainees with Enterprise Custom <span>Solutions.</span></h2>
+                  </div>
+                </div>
+                <div class="about-bottom-area d-flex gap-4 mt-4">
+                  <div class="mission-vision-box wow fadeInLeft" data-wow-delay=".5s">
+                    <h4 class="title">Our Mission</h4>
+                    <p class="desc">To empower regional enterprises with high-efficiency custom software platforms and machine learning dashboards that streamline operations.</p>
+                    <ul class="list-items" style="list-style: none; padding: 0;">
+                      <li style="margin-bottom: 8px;"><i class="tji-list" style="margin-right: 8px;"></i>High-Performance Code</li>
+                      <li style="margin-bottom: 8px;"><i class="tji-list" style="margin-right: 8px;"></i>Seamless System Design</li>
+                      <li><i class="tji-list" style="margin-right: 8px;"></i>Regional Growth Focused</li>
+                    </ul>
+                  </div>
+                  <div class="mission-vision-box wow fadeInRight" data-wow-delay=".5s">
+                    <h4 class="title">Our Vision</h4>
+                    <p class="desc">To stand as the primary technology incubation and software engineering center, driving developer standards and enterprise efficiency.</p>
+                    <ul class="list-items" style="list-style: none; padding: 0;">
+                      <li style="margin-bottom: 8px;"><i class="tji-list" style="margin-right: 8px;"></i>Incubation Excellence</li>
+                      <li style="margin-bottom: 8px;"><i class="tji-list" style="margin-right: 8px;"></i>Robust Cloud Portals</li>
+                      <li><i class="tji-list" style="margin-right: 8px;"></i>Sustainable Local Impact</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: About Section -->
+
+        <!-- start: Client Section -->
+        <section class="tj-client-section" style="padding: 50px 0; background: #ffffff; border-top: 1px solid rgba(0, 0, 0, 0.05); border-bottom: 1px solid rgba(0, 0, 0, 0.05);">
+          <div class="container-fluid client-container">
+            <div class="row">
+              <div class="col-12">
+                <div class="client-content text-center mb-4">
+                  <h5 class="sec-title" style="color: #364e52; font-size: 16px; letter-spacing: 1px; text-transform: uppercase;">
+                    Partnered with Over <span style="color: var(--primary-teal); font-weight: 800; font-size: 20px;">50+</span> Enterprises
+                  </h5>
+                </div>
+                <div class="swiper client-slider client-slider-1">
+                  <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide client-item text-center">
+                      <div class="client-logo"><img src="assets/images/logo/BuildXRobotix_logo.webp" alt="BuildX Robotix" style="max-height: 45px; width: auto; object-fit: contain;"></div>
+                    </div>
+                    <div class="swiper-slide client-item text-center">
+                      <div class="client-logo"><img src="assets/images/logo/HappyBondinglogo.png" alt="Happy Bonding" style="max-height: 45px; width: auto; object-fit: contain;"></div>
+                    </div>
+                    <div class="swiper-slide client-item text-center">
+                      <div class="client-logo"><img src="assets/images/logo/Kms.logo.jpg" alt="Kongu Matric School" style="max-height: 45px; width: auto; object-fit: contain;"></div>
+                    </div>
+                    <div class="swiper-slide client-item text-center">
+                      <div class="client-logo"><img src="assets/images/logo/DKpaqua&pets.png" alt="DKp Aqua & Pets" style="max-height: 45px; width: auto; object-fit: contain;"></div>
+                    </div>
+                    <div class="swiper-slide client-item text-center">
+                      <div class="client-logo"><img src="assets/images/logo/dreamsinfinite.webp" alt="Dreams Infinite" style="max-height: 45px; width: auto; object-fit: contain;"></div>
+                    </div>
+                    <div class="swiper-slide client-item text-center">
+                      <div class="client-logo"><img src="assets/images/logo/royalpackers and movers.png" alt="Royal Packers & Movers" style="max-height: 45px; width: auto; object-fit: contain;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Client Section -->
+
+        <!-- start: Testimonial Section -->
+        <section class="tj-testimonial-section-2 section-bottom-gap" style="padding: 100px 0;">
+          <div class="container">
+            <div class="row align-items-center row-gap-5">
+              <div class="col-lg-6 order-lg-2">
+                <div class="testimonial-img-area wow fadeInUp" data-wow-delay=".3s" style="position: relative;">
+                  <div class="testimonial-img" style="border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(30,138,138,0.15);">
+                    <img src="assets/images/testimonial/studenttestimonials.webp" alt="Vidhai Guidance Testimonial" style="width: 100%; max-height: 480px; object-fit: cover;">
+                  </div>
+                  <div class="box-area" style="position: absolute; bottom: -30px; right: 20px;">
+                    <div class="rating-box wow fadeInUp" data-wow-delay=".5s" style="padding: 20px; text-align: center;">
+                      <h2 class="title" style="color: var(--primary-teal); font-weight: 800; font-size: 36px; margin: 0;">500+</h2>
+                      <span class="rating-text" style="font-weight: 700; font-size: 13px; display: block; margin-top: 5px;">Students Guided & Incubated</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 order-lg-1">
+                <div class="testimonial-wrapper wow fadeInUp" data-wow-delay=".5s">
+                  <div class="sec-heading mb-4">
+                    <span class="sub-title" style="color: var(--primary-teal); font-weight: 600; text-transform: uppercase;">Enterprise Feedback</span>
+                    <h2 class="sec-title">What Our Partners & Interns <span>Say.</span></h2>
+                  </div>
+                  <div class="swiper testimonial-slider-2">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="testimonial-item">
+                          <span class="quote-icon"><i class="tji-quote"></i></span>
+                          <div class="desc">
+                            <p>"Vidhai AI Solutions delivered a custom School ERP platform that streamlined our invoices and registration databases. Their guiding mentors and developer teams demonstrated exceptional tech capabilities."</p>
+                          </div>
+                          <div class="testimonial-author">
+                            <div class="author-inner d-flex align-items-center gap-3">
+                              <div class="author-img">
+                                <img src="assets/images/logo/studentavfemale.webp" alt="KMS Partner Logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                              </div>
+                              <div class="author-header">
+                                <h4 class="title" style="font-size: 16px; margin: 0;">Kongu Matric School</h4>
+                                <span class="designation" style="font-size: 13px;">School ERP Collaboration Partner</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="testimonial-item">
+                          <span class="quote-icon"><i class="tji-quote"></i></span>
+                          <div class="desc">
+                            <p>"The materials tracker and site supervisor logging app built by Vidhai CRM team saved us hours of ledger verification. The codebase is incredibly fast and responsive."</p>
+                          </div>
+                          <div class="testimonial-author">
+                            <div class="author-inner d-flex align-items-center gap-3">
+                              <div class="author-img">
+                                <img src="assets/images/logo/studentavmale.webp" alt="CRM Partner Logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                              </div>
+                              <div class="author-header">
+                                <h4 class="title" style="font-size: 16px; margin: 0;">Thendral City Builder</h4>
+                                <span class="designation" style="font-size: 13px;">Custom CRM Client</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="testimonial-item">
+                          <span class="quote-icon"><i class="tji-quote"></i></span>
+                          <div class="desc">
+                            <p>"During my 6-month MERN and Python incubation module at Vidhai AI, I built real components for production databases. The mentorship under Vijay and Jayaprathap gave me solid software engineering habits."</p>
+                          </div>
+                          <div class="testimonial-author">
+                            <div class="author-inner d-flex align-items-center gap-3">
+                              <div class="author-img">
+                                <img src="assets/images/logo/studentavmale.webp" alt="Intern Avatar" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                              </div>
+                              <div class="author-header">
+                                <h4 class="title" style="font-size: 16px; margin: 0;">Certified Intern Trainee</h4>
+                                <span class="designation" style="font-size: 13px;">Talent Program Graduate</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination-area mt-4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Testimonial Section -->
+
+        <!-- start: Team Section -->
+        <section class="tj-team-section-3 section-gap section-gap-x">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="sec-heading text-center mb-5">
+                  <span class="sub-title wow fadeInUp" data-wow-delay=".3s" style="color: var(--primary-teal); font-weight: 600;"><i class="tji-box" style="margin-right: 8px;"></i>Meet Our Guides</span>
+                  <h2 class="sec-title title-anim">Leadership & <span>Advisors</span> Driving Vidhai AI</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row leftSwipeWrap justify-content-center g-4">
+              <!-- Team Member 1: Manish P -->
+              <div class="col-lg-4 col-sm-6">
+                <div class="team-item left-swipe">
+                  <div class="team-img" style="padding: 25px 20px 0; text-align: center;">
+                    <div class="team-img-inner" style="width: 140px; height: 140px; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #e6f2f2, #cde2e2); border: 3px solid #ffffff; box-shadow: 0 5px 15px rgba(30,138,138,0.15); color: var(--primary-teal); font-size: 48px;">
+                      <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                  </div>
+                  <div class="team-content text-center" style="padding: 20px;">
+                    <h4 class="title" style="font-size: 18px; font-weight: 700; margin-bottom: 5px;">Manish P</h4>
+                    <span class="designation" style="font-size: 13px; color: var(--primary-teal); font-weight: 600; text-transform: uppercase;">Founder & CEO</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Team Member 2: Surya Prakash R -->
+              <div class="col-lg-4 col-sm-6">
+                <div class="team-item left-swipe">
+                  <div class="team-img" style="padding: 25px 20px 0; text-align: center;">
+                    <div class="team-img-inner" style="width: 140px; height: 140px; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #e6f2f2, #cde2e2); border: 3px solid #ffffff; box-shadow: 0 5px 15px rgba(30,138,138,0.15); color: var(--primary-teal); font-size: 48px;">
+                      <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                  </div>
+                  <div class="team-content text-center" style="padding: 20px;">
+                    <h4 class="title" style="font-size: 18px; font-weight: 700; margin-bottom: 5px;">Surya Prakash R</h4>
+                    <span class="designation" style="font-size: 11px; color: var(--primary-teal); font-weight: 600; text-transform: uppercase; display: block; line-height: 1.3;">Skycrest Digital Marketing CEO, Vidhai AI Solutions Mentor</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Team Member 3: Harish S -->
+              <div class="col-lg-4 col-sm-6">
+                <div class="team-item left-swipe">
+                  <div class="team-img" style="padding: 25px 20px 0; text-align: center;">
+                    <div class="team-img-inner" style="width: 140px; height: 140px; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #e6f2f2, #cde2e2); border: 3px solid #ffffff; box-shadow: 0 5px 15px rgba(30,138,138,0.15); color: var(--primary-teal); font-size: 48px;">
+                      <i class="fa-solid fa-code"></i>
+                    </div>
+                  </div>
+                  <div class="team-content text-center" style="padding: 20px;">
+                    <h4 class="title" style="font-size: 18px; font-weight: 700; margin-bottom: 5px;">Harish S</h4>
+                    <span class="designation" style="font-size: 11px; color: var(--primary-teal); font-weight: 600; text-transform: uppercase; display: block; line-height: 1.3;">Business Development Executive / Web Developer</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Team Member 4: Nandha Akash M -->
+              <div class="col-lg-4 col-sm-6">
+                <div class="team-item left-swipe">
+                  <div class="team-img" style="padding: 25px 20px 0; text-align: center;">
+                    <div class="team-img-inner" style="width: 140px; height: 140px; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #e6f2f2, #cde2e2); border: 3px solid #ffffff; box-shadow: 0 5px 15px rgba(30,138,138,0.15); color: var(--primary-teal); font-size: 48px;">
+                      <i class="fa-solid fa-brain"></i>
+                    </div>
+                  </div>
+                  <div class="team-content text-center" style="padding: 20px;">
+                    <h4 class="title" style="font-size: 18px; font-weight: 700; margin-bottom: 5px;">Nandha Akash M</h4>
+                    <span class="designation" style="font-size: 11px; color: var(--primary-teal); font-weight: 600; text-transform: uppercase; display: block; line-height: 1.3;">Business Development Executive / AI ML Engineer</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Team Member 5: Rithan S -->
+              <div class="col-lg-4 col-sm-6">
+                <div class="team-item left-swipe">
+                  <div class="team-img" style="padding: 25px 20px 0; text-align: center;">
+                    <div class="team-img-inner" style="width: 140px; height: 140px; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #e6f2f2, #cde2e2); border: 3px solid #ffffff; box-shadow: 0 5px 15px rgba(30,138,138,0.15); color: var(--primary-teal); font-size: 48px;">
+                      <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                  </div>
+                  <div class="team-content text-center" style="padding: 20px;">
+                    <h4 class="title" style="font-size: 18px; font-weight: 700; margin-bottom: 5px;">Rithan S</h4>
+                    <span class="designation" style="font-size: 13px; color: var(--primary-teal); font-weight: 600; text-transform: uppercase;">Vidhai AI Solutions Mentor</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Team Member 6: Jayaprathap P -->
+              <div class="col-lg-4 col-sm-6">
+                <div class="team-item left-swipe">
+                  <div class="team-img" style="padding: 25px 20px 0; text-align: center;">
+                    <div class="team-img-inner" style="width: 140px; height: 140px; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #e6f2f2, #cde2e2); border: 3px solid #ffffff; box-shadow: 0 5px 15px rgba(30,138,138,0.15); color: var(--primary-teal); font-size: 48px;">
+                      <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                  </div>
+                  <div class="team-content text-center" style="padding: 20px;">
+                    <h4 class="title" style="font-size: 18px; font-weight: 700; margin-bottom: 5px;">Jayaprathap P</h4>
+                    <span class="designation" style="font-size: 13px; color: var(--primary-teal); font-weight: 600; text-transform: uppercase;">Senior Mentor</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Team Section -->
+
+        <!-- start: Faq Section -->
+        <section class="tj-faq-section section-gap">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-lg-4">
+                <div class="content-wrap">
+                  <div class="sec-heading">
+                    <span class="sub-title wow fadeInUp" data-wow-delay=".3s" style="color: var(--primary-teal); font-weight: 600;"><i class="tji-box" style="margin-right: 8px;"></i>Common Questions</span>
+                    <h2 class="sec-title title-anim">Need <span>Help?</span> Start Here...</h2>
+                  </div>
+                  <p class="desc wow fadeInUp" data-wow-delay=".6s" style="color: #556c70;">Explore frequent queries regarding our custom systems integration scope, student training certifications, and deployment schedules.</p>
+                  <div class="wow fadeInUp" data-wow-delay=".8s">
+                    <a class="tj-primary-btn" href="contact.html">
+                      <span class="btn-text"><span>Request a Call</span></span>
+                      <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="accordion tj-faq" id="faqOne">
+                  <div class="accordion-item active wow fadeInUp" data-wow-delay=".3s">
+                    <button class=" faq-title" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1"
+                      aria-expanded="true">What custom solutions does Vidhai AI build?</button>
+                    <div id="faq-1" class="collapse show" data-bs-parent="#faqOne">
+                      <div class="accordion-body faq-text">
+                        <p>We build production-ready software systems for enterprise automation, including custom materials trackers (CRM), school registries (ERP), specialized billing software, and custom API interfaces tailored for regional operations.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item wow fadeInUp" data-wow-delay=".4s">
+                    <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2"
+                      aria-expanded="false">How do university students join the talent incubator?</button>
+                    <div id="faq-2" class="collapse" data-bs-parent="#faqOne">
+                      <div class="accordion-body faq-text">
+                        <p>Under our signing agreements (MOUs) with regional institutions, eligible engineering and science graduates participate in custom developers bootcamps. Promising students secure production-level internships on our client projects.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item wow fadeInUp" data-wow-delay=".5s">
+                    <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3"
+                      aria-expanded="false">Do you offer system maintenance and support after delivery?</button>
+                    <div id="faq-3" class="collapse" data-bs-parent="#faqOne">
+                      <div class="accordion-body faq-text">
+                        <p>Yes. Every deployed portal has dedicated lifecycle support. We manage database migrations, cloud hosting parameters, software updates, and custom backend feature extensions.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item wow fadeInUp" data-wow-delay=".6s">
+                    <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4"
+                      aria-expanded="false">What core technologies do you implement?</button>
+                    <div id="faq-4" class="collapse" data-bs-parent="#faqOne">
+                      <div class="accordion-body faq-text">
+                        <p>Our stack focuses heavily on Python, Node.js, and React.js (MERN) for custom applications, coupled with cloud infrastructures (AWS/GCP), and machine learning services for data intelligence operations.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Faq Section -->
+
+        <!-- start: Cta Section -->
+        <section class="tj-cta-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="cta-area" style="border-radius: 12px; overflow: hidden; background: #0c1e21; position: relative;">
+                  <div class="cta-content" style="position: relative; z-index: 5; padding: 60px 40px;">
+                    <h2 class="title title-anim" style="color: #ffffff;">Let’s Build Future Together.</h2>
+                    <div class="cta-btn wow fadeInUp" data-wow-delay=".6s" style="margin-top: 20px;">
+                      <a class="tj-primary-btn" href="contact.html">
+                        <span class="btn-text"><span>Get Started Now</span></span>
+                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="cta-img" style="position: absolute; right: 0; top: 0; height: 100%; z-index: 1; opacity: 0.15;">
+                    <img src="assets/images/cta/cta-bg.webp" alt="CTA Background">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end: Cta Section -->
+      </main>
+
+      <!-- start: Footer Section -->
+      <footer class="tj-footer-section footer-1 section-gap-x" style="padding-bottom: 30px; background: #081214; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <img src="assets/images/logo/vidhailogobg.png" alt="Logo" style="height: 60px; width: auto; object-fit: contain; margin-bottom: 25px;">
+                <p style="color: #a9b8b8; line-height: 1.6;">Empowering local enterprises with high-performance digital tools, machine learning insights, and enterprise automation.</p>
+                <div class="social-links d-flex gap-3 mt-4">
+                  <a href="https://www.instagram.com/vidhai_ai_solutions?igsh=MnN3NDM2MzkxOXdy" target="_blank" style="background: rgba(255, 255, 255, 0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/company/vidhai-ai-solutions" target="_blank" style="background: rgba(255, 255, 255, 0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4 style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 25px;">Quick Links</h4>
+                <div class="row">
+                  <div class="col-6">
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                      <li style="margin-bottom: 12px;"><a href="index.html" style="color: #a9b8b8; text-decoration: none;">Home</a></li>
+                      <li style="margin-bottom: 12px;"><a href="about.html" style="color: #a9b8b8; text-decoration: none;">About</a></li>
+                      <li style="margin-bottom: 12px;"><a href="service.html" style="color: #a9b8b8; text-decoration: none;">Services</a></li>
+                      <li style="margin-bottom: 12px;"><a href="contact.html" style="color: #a9b8b8; text-decoration: none;">Contact</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                      <li style="margin-bottom: 12px;"><a href="vidhai-services.html" style="color: #a9b8b8; text-decoration: none;">Custom Service</a></li>
+                      <li style="margin-bottom: 12px;"><a href="faq.html" style="color: #a9b8b8; text-decoration: none;">FAQ</a></li>
+                      <li style="margin-bottom: 12px;"><a href="careers.html" style="color: #a9b8b8; text-decoration: none;">Programs</a></li>
+                      <li style="margin-bottom: 12px;"><a href="service.html" style="color: #a9b8b8; text-decoration: none;">Software Services</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4 style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 25px;">Our Branches</h4>
+                <p style="color: #a9b8b8; margin-bottom: 10px; font-size: 13px; line-height: 1.4;"><i class="fa-solid fa-map-pin" style="color: var(--primary-teal); margin-right: 10px;"></i> <strong>Tiruppur (HO):</strong> no7, muthu nagar, sidco road, tiruppur 641606</p>
+                <p style="color: #a9b8b8; margin-bottom: 15px; font-size: 13px; line-height: 1.4;"><i class="fa-solid fa-map-pin" style="color: var(--primary-teal); margin-right: 10px;"></i> <strong>Hosur Branch:</strong> 2/339, 2nd St, Kamaraj Nagar, Leyland, Hosur 635126</p>
+                <p style="color: #a9b8b8; margin-bottom: 10px;"><i class="fa-solid fa-phone" style="color: var(--primary-teal); margin-right: 10px;"></i> +91 9345504199</p>
+                <p style="color: #a9b8b8; margin-bottom: 15px;"><i class="fa-solid fa-envelope" style="color: var(--primary-teal); margin-right: 10px;"></i> aividhai26@gmail.com</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-widget">
+                <h4 style="color: #ffffff; font-size: 20px; font-weight: 700; margin-bottom: 25px;">Newsletter</h4>
+                <p style="color: #a9b8b8; margin-bottom: 20px;">Subscribe to our newsletter for latest updates.</p>
+                <form action="#" class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                  <div class="form-group" style="position: relative; margin-bottom: 15px;">
+                    <input type="email" placeholder="Your Email" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; padding: 12px 15px; width: 100%; border-radius: 6px; font-size: 14px;" required>
+                    <button type="submit" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: var(--primary-teal); border: none; color: #fff; width: 35px; height: 35px; border-radius: 4px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;"><i class="fa-solid fa-paper-plane"></i></button>
+                  </div>
+                  <div class="form-check d-flex align-items-start gap-2" style="margin: 0; padding: 0;">
+                    <input type="checkbox" id="newsletter-agree" style="margin-top: 4px; cursor: pointer;" required>
+                    <label for="newsletter-agree" style="color: #a9b8b8; font-size: 12px; line-height: 1.4; cursor: pointer; user-select: none;">I agree to the <a href="faq.html" style="color: var(--primary-teal); text-decoration: none;">Terms & Conditions</a></label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <hr style="border-top: 1px solid rgba(255,255,255,0.08); margin: 50px 0 25px;">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-md-start text-center">
+              <p style="color: #67787a; margin: 0;">&copy; 2026 <a href="index.html" style="color: var(--mint-accent); text-decoration: none;">Vidhai AI Solutions</a>. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end: Footer Section -->
+    </div>
+  </div>
+
+  <!-- JS here -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollSmoother.js"></script>
+  <script src="assets/js/gsap-scroll-to-plugin.min.js"></script>
+  <script src="assets/js/gsap-scroll-trigger.min.js"></script>
+  <script src="assets/js/gsap-split-text.min.js"></script>
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <script src="assets/js/swiper.min.js"></script>
+  <script src="assets/js/odometer.min.js"></script>
+  <script src="assets/js/venobox.min.js"></script>
+  <script src="assets/js/appear.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/meanmenu.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Swiper logo marquee settings
+      var clientSwiper = new Swiper('.client-slider-1', {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          576: { slidesPerView: 3 },
+          768: { slidesPerView: 4 },
+          1024: { slidesPerView: 5 }
+        }
+      });
+
+      // Swiper testimonials settings
+      var testimonialSwiper = new Swiper('.testimonial-slider-2', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
