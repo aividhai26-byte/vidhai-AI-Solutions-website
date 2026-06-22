@@ -67,7 +67,7 @@ Progressbar js
 
 	/* ------------- Gsap registration Js -------------*/
 	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
-	if ($("#smooth-wrapper").length && $("#smooth-content").length) {
+	if ($("#smooth-wrapper").length && $("#smooth-content").length && window.innerWidth > 991) {
 		gsap.config({
 			nullTargetWarn: false,
 		});
@@ -77,6 +77,20 @@ Progressbar js
 			effects: true,
 			smoothTouch: 0.1,
 			ignoreMobileResize: true,
+		});
+	} else if ($("#smooth-wrapper").length && $("#smooth-content").length) {
+		// On mobile, force native smooth scrolling behaviors and clean wrapper styles if needed
+		$("#smooth-wrapper").css({
+			"position": "static",
+			"overflow": "visible",
+			"width": "100%",
+			"height": "auto"
+		});
+		$("#smooth-content").css({
+			"position": "static",
+			"overflow": "visible",
+			"width": "100%",
+			"height": "auto"
 		});
 	}
 
