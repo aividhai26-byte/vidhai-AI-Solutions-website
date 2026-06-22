@@ -129,6 +129,46 @@ body {
   line-height: 1.5;
 }
 
+/* ===== REDUCED MOTION (Accessibility) ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ===== GPU HINTING & TABULAR NUMS FOR COUNTERS ===== */
+.countup-item, .customers-box, .call-box {
+  contain: layout;
+}
+.odometer, .countup-number, .number {
+  font-variant-numeric: tabular-nums;
+  min-width: 5ch;
+  will-change: transform;
+  backface-visibility: hidden;
+  transition: none !important;
+}
+
+/* ===== MOBILE TRANSFORMS & HOVER SUPPRESSION ===== */
+@media (max-width: 768px) {
+  * {
+    transition-delay: 0s !important;
+  }
+  img, a, .team-item, .service-item, .choose-box, .pricing-box {
+    transform: none !important;
+    transition: none !important;
+  }
+  .client-logo img:hover, .team-item:hover, .service-item:hover, .choose-box:hover {
+    transform: none !important;
+  }
+}
+
+
 a {
   text-decoration: none;
 }
@@ -9278,4 +9318,54 @@ img {
 #homepage-problem-form textarea::placeholder {
   color: #67787a !important;
   opacity: 0.8 !important;
+}
+
+/* ===== LENIS SMOOTH SCROLL INTEGRATION & PERFORMANCE OPTIMIZATIONS ===== */
+
+/* 1. Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* 2. GPU Hinting for Dynamic Stats Counters */
+.countup-item {
+  contain: layout;
+}
+.countup-number, .odometer {
+  font-variant-numeric: tabular-nums;
+  min-width: 5ch;
+  will-change: transform;
+  backface-visibility: hidden;
+  transition: none !important;
+}
+
+/* 3. Mobile menu scroll lock and momentum scroll */
+body.no-scroll, body.overflow-hidden {
+  overflow: hidden;
+}
+.tj-offcanvas-area, .hamburger-area {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* 4. Reduce animations and hover effects on mobile */
+@media (max-width: 768px) {
+  *, *::before, *::after {
+    transition-duration: 0.1s !important;
+  }
+  .service-card-item:hover,
+  .tj-primary-btn:hover,
+  .portfolio-item:hover,
+  .swiper-slide:hover,
+  img:hover {
+    transform: none !important;
+  }
 }

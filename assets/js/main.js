@@ -66,33 +66,7 @@ Progressbar js
 	});
 
 	/* ------------- Gsap registration Js -------------*/
-	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
-	if ($("#smooth-wrapper").length && $("#smooth-content").length && window.innerWidth > 991) {
-		gsap.config({
-			nullTargetWarn: false,
-		});
-
-		let smoother = ScrollSmoother.create({
-			smooth: 1.5,
-			effects: true,
-			smoothTouch: 0.1,
-			ignoreMobileResize: true,
-		});
-	} else if ($("#smooth-wrapper").length && $("#smooth-content").length) {
-		// On mobile, force native smooth scrolling behaviors and clean wrapper styles if needed
-		$("#smooth-wrapper").css({
-			"position": "static",
-			"overflow": "visible",
-			"width": "100%",
-			"height": "auto"
-		});
-		$("#smooth-content").css({
-			"position": "static",
-			"overflow": "visible",
-			"width": "100%",
-			"height": "auto"
-		});
-	}
+	gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 	////////////////////////////////////////////////////
 	// Data js
@@ -120,11 +94,11 @@ Progressbar js
 		lastScrollTop = st;
 	}
 
-	$(window).on("scroll", function () {
+	window.addEventListener("scroll", function () {
 		if ($(".header-area").length) {
 			stickyMenu($(".header-sticky"), "sticky");
 		}
-	});
+	}, { passive: true });
 
 	////////////////////////////////////////////////////
 	// Mobile Menu Js
