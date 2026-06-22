@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /assets/js/
+Disallow: /assets/saas/
+
+Sitemap: https://vidhaiisolutions.com/sitemap.xml
